@@ -11,8 +11,10 @@ export const Home: FC = () => {
 				<MyBooks />
 			</Styled.TopSection>
 			<Styled.BottomSection>
-				<FaveWriters />
-				<Library />
+				<Styled.Content>
+					<FaveWriters />
+					<Library />
+				</Styled.Content>
 			</Styled.BottomSection>
 		</Styled.Container>
 	);

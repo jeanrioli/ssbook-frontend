@@ -14,11 +14,21 @@ export const Content = styled.div`
 	}
 `;
 
-export const List = styled.div<{ gap: number }>`
+export const List = styled.div<{ columns: number }>`
 	display: flex;
 	height: 100%;
 	overflow-x: scroll;
-	gap: ${({ gap }) => gap}px;
+	gap: 20px;
+
+	@media (min-width: 1280px) {
+		gap: 24px;
+		display: grid;
+		grid-template-columns: repeat(${({ columns }) => columns}, 1fr);
+		/* overflow-x: auto; */
+		:nth-child(n + ${({ columns }) => columns + 1}) {
+			display: none;
+		}
+	}
 `;
 
 export const Item = styled.div`

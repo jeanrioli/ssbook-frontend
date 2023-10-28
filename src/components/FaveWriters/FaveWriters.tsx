@@ -12,7 +12,7 @@ export const FaveWriters: FC = () => {
 				<Styled.Title>Autores favoritos</Styled.Title>
 				<Styled.More>ver todos</Styled.More>
 			</Styled.Top>
-			<HorizontalList>
+			<HorizontalList columns={3}>
 				{list.map((item) => (
 					<WriterCard
 						name='Rick Riordan'

@@ -28,7 +28,7 @@ export const MyBooks: FC = () => {
 				<Styled.More>ver todos</Styled.More>
 			</Styled.Top>
 			{activeTab === 'MyBooks' && (
-				<HorizontalList>
+				<HorizontalList columns={6}>
 					{list.map((item) => (
 						<BookCard />
 					))}

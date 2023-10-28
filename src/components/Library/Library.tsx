@@ -12,7 +12,7 @@ export const Library: FC = () => {
 				<Styled.Title>Biblioteca</Styled.Title>
 			</Styled.Top>
 
-			<HorizontalList gap={8}>
+			<HorizontalList columns={categories.length}>
 				{categories.map((categoria, index) => (
 					<Button variant='pill' text={categoria} isSelected={index === 0 ? true : false} />
 				))}
