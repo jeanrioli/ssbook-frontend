@@ -10,7 +10,7 @@ export const Container = styled.div`
 	flex-direction: column;
 
 	@media (min-width: 768px) {
-		margin: 0;
+		margin-bottom: 0;
 	}
 `;
 
@@ -20,7 +20,7 @@ export const BottomSection = styled.div`
 	display: flex;
 	flex: 1;
 	flex-direction: column;
-	padding: 32px 0 0;
+	padding: 32px 0 20px;
 	background: #fff;
 	height: 32px;
 	border-radius: 32px 0 0;

@@ -8,8 +8,17 @@ export const Container = styled.div`
 	position: fixed;
 	bottom: 0;
 	z-index: 99;
+	display: flex;
+	align-items: center;
 
 	@media (min-width: 768px) {
 		display: none;
 	}
+`;
+
+export const Navigation = styled.nav`
+	margin: 0 auto;
+	width: max-content;
+	display: flex;
+	gap: 28px;
 `;
