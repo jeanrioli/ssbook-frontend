@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import * as Styled from './Home.styled';
 import { MyBooks } from '../../components';
-import { FaveWriters } from '../../components/FaveWriters';
+import { FaveAuthors } from '../../components/FaveAuthors';
 import { Library } from '../../components/Library';
 
 export const Home: FC = () => {
@@ -14,7 +14,7 @@ export const Home: FC = () => {
 			</Styled.TopSection>
 			<Styled.BottomSection>
 				<Styled.Content>
-					<FaveWriters />
+					<FaveAuthors />
 					<Library />
 				</Styled.Content>
 			</Styled.BottomSection>

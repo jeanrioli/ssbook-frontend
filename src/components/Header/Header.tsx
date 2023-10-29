@@ -6,7 +6,7 @@ export const Header = () => {
 		<Styled.Container>
 			<Styled.Position>
 				<Styled.Content>
-					<img src='logo/ssbook-color-logo.svg' />
+					<img src='logo/ssbook-color-logo.svg' alt='ssbook logo' />
 					<Profile />
 				</Styled.Content>
 			</Styled.Position>

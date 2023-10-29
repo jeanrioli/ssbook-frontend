@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import * as Styled from './WriterCard.styled';
+import * as Styled from './AuthorCard.styled';
 
 interface WriterCardProps {
 	name: string;

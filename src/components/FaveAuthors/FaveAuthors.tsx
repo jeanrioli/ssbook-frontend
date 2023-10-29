@@ -1,10 +1,10 @@
 import { FC } from 'react';
-import * as Styled from './FaveWriters.styled';
+import * as Styled from './FaveAuthors.styled';
 import { CardList } from '../CardList';
-import { WriterCard } from '../WiterCard';
+import { WriterCard } from '../AuthorCard';
 import { Button } from '../Button';
 
-export const FaveWriters: FC = () => {
+export const FaveAuthors: FC = () => {
 	const list = [1, 2, 3, 4, 5, 6, 7, 8];
 
 	return (
