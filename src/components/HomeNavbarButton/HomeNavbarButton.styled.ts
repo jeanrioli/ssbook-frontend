@@ -30,5 +30,5 @@ export const Line = styled.hr<{ $isSelected: boolean }>`
 	bottom: 0;
 	left: 0;
 	border-radius: 2px 2px 0px 0px;
-	background: ${({ $isSelected }) => ($isSelected ? '#a076f2' : '#fff')};
+	background: ${({ $isSelected }) => ($isSelected ? '#a076f2' : 'transparent')};
 `;

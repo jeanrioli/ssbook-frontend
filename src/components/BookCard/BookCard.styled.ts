@@ -1,8 +1,7 @@
 import styled, { css } from 'styled-components';
 
 export const Container = styled.div<{ variant: 'vertical' | 'horizontal' }>`
-	/* /* height: 262px; */
-	/* width: 136px; */
+	width: 136px;
 	display: flex;
 	gap: 8px;
 

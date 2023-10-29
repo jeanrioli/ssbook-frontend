@@ -8,7 +8,9 @@ export const Home: FC = () => {
 	return (
 		<Styled.Container>
 			<Styled.TopSection>
-				<MyBooks />
+				<Styled.Content>
+					<MyBooks />
+				</Styled.Content>
 			</Styled.TopSection>
 			<Styled.BottomSection>
 				<Styled.Content>

@@ -6,6 +6,11 @@ export const Top = styled.div`
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	padding: 0 20px 20px;
+
+	@media (min-width: 1280px) {
+		padding: 0 0 24px;
+	}
 `;
 
 export const Title = styled.div`

@@ -19,12 +19,13 @@ export const List = styled.div<{ columns: number }>`
 	height: 100%;
 	overflow-x: scroll;
 	gap: 20px;
+	padding: 0 20px;
 
 	@media (min-width: 1280px) {
 		gap: 24px;
+		padding: 0;
 		display: grid;
 		grid-template-columns: repeat(${({ columns }) => columns}, 1fr);
-		/* overflow-x: auto; */
 		:nth-child(n + ${({ columns }) => columns + 1}) {
 			display: none;
 		}

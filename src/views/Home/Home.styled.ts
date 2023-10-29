@@ -14,32 +14,34 @@ export const Container = styled.div`
 `;
 
 export const TopSection = styled.div`
+	padding-bottom: 32px;
+
 	@media (min-width: 1280px) {
 		width: 936px;
 		margin: 0 auto;
+		padding-top: 24px;
 	}
 `;
 
 export const BottomSection = styled.div`
-	width: calc(936px + ((100% - 936px) / 2) - 32px);
-	/* background-color: red; */
-	/* align-self: flex-end; */
-	margin-left: calc(((100% - 936px) / 2) - 32px);
 	flex: 1;
 	display: flex;
 	background-color: #fff;
 	border-radius: 32px 0 0;
-	padding: 0 32px 60px 32px;
-	box-shadow: -4px -4px 8px 0 rgba(0, 0, 0, 0.1);
+	padding: 32px 0 60px;
 	flex-direction: column;
+	box-shadow: 0px -1px 1px 0px rgba(0, 0, 0, 0.05);
+
+	@media (min-width: 1280px) {
+		width: calc(936px + ((100% - 936px) / 2) - 32px);
+		margin-left: calc(((100% - 936px) / 2) - 32px);
+		box-shadow: 0px 0px 8px 0 rgba(0, 0, 0, 0.1);
+		padding: 32px 32px 60px 32px;
+	}
 `;
 
 export const Content = styled.div`
-	/* display: flex; */
-	width: 936px;
-	/* padding: 32px calc(13vw) 60px 0; */
-	/* border-radius: 32px 0 0; */
-	/* box-shadow: -4px -4px 8px 0 rgba(0, 0, 0, 0.1); */
-	/* flex: 1; */
-	/* background-color: #fff; */
+	@media (min-width: 1280px) {
+		width: 936px;
+	}
 `;

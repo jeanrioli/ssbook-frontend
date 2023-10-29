@@ -22,7 +22,9 @@ export const MyBooks: FC = () => {
 
 	return (
 		<Styled.Container>
-			<HomeNavbar tabs={tabs} selected={activeTab} onSelect={setActiveTab} />
+			<Styled.Tabs>
+				<HomeNavbar tabs={tabs} selected={activeTab} onSelect={setActiveTab} />
+			</Styled.Tabs>
 			<Styled.Top>
 				<Styled.Title>Livros favoritos</Styled.Title>
 				<Styled.More>ver todos</Styled.More>
