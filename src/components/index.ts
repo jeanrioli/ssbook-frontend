@@ -7,3 +7,4 @@ export * from './HomeNavbarButton';
 export * from './MyBooks';
 export * from './CardList';
 export * from './Section';
+export * from './PillList';

@@ -28,7 +28,7 @@ export const BottomSection = styled.div`
 	display: flex;
 	background-color: #fff;
 	border-radius: 32px 0 0;
-	padding: 32px 0 60px;
+	padding: 32px 0;
 	flex-direction: column;
 	box-shadow: 0px -1px 1px 0px rgba(0, 0, 0, 0.05);
 
@@ -36,7 +36,7 @@ export const BottomSection = styled.div`
 		width: calc(936px + ((100% - 936px) / 2) - 32px);
 		margin-left: calc(((100% - 936px) / 2) - 32px);
 		box-shadow: 0px 0px 8px 0 rgba(0, 0, 0, 0.1);
-		padding: 32px 32px 60px 32px;
+		padding: 32px;
 	}
 `;
 

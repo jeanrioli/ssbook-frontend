@@ -1,11 +1,11 @@
 import { FC } from 'react';
 import * as Styled from './Library.styled';
-import { CardList } from '../CardList';
+import { PillList } from '../PillList';
 import { Button } from '../Button';
 import { BookCard } from '../BookCard';
 
 export const Library: FC = () => {
-	const categories = ['todos', 'terror', 'suspense', 'romance', 'aventura', 'comédia'];
+	const categories = ['Todos', 'terror', 'suspense', 'romance', 'aventura', 'comédia'];
 	return (
 		<Styled.Container>
 			<Styled.Top>
@@ -13,11 +13,11 @@ export const Library: FC = () => {
 			</Styled.Top>
 
 			<Styled.Pills>
-				<CardList columns={categories.length}>
+				<PillList>
 					{categories.map((categoria, index) => (
 						<Button variant='pill' text={categoria} isSelected={index === 0 ? true : false} />
 					))}
-				</CardList>
+				</PillList>
 			</Styled.Pills>
 
 			<Styled.Books>

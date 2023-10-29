@@ -17,8 +17,15 @@ export const Container = styled.div`
 	}
 `;
 
-export const Content = styled.div`
+export const Position = styled.div`
 	padding: 6px 20px;
+
+	@media (min-width: 1280px) {
+		padding: 12px 32px 12px 0;
+	}
+`;
+
+export const Content = styled.div`
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -27,6 +34,5 @@ export const Content = styled.div`
 
 	@media (min-width: 1280px) {
 		width: 936px;
-		padding: 12px 32px 12px 0;
 	}
 `;

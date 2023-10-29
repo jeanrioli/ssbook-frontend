@@ -1,8 +1,6 @@
 import { FC, Children, ReactNode } from 'react';
 import * as Styled from './CardList.styled';
 
-import { BookCard } from '../BookCard';
-
 interface CardListProps {
 	columns: number;
 	children: ReactNode;
