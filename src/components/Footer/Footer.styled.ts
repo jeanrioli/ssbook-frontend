@@ -5,7 +5,7 @@ export const Container = styled.div`
 	background-color: #a076f2;
 	padding: 16px 20px;
 
-	@media screen and (min-width: 768px) {
+	@media screen and (min-width: 1280px) {
 		display: block;
 	}
 `;

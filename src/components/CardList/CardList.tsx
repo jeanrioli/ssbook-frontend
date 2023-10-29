@@ -1,14 +1,14 @@
 import { FC, Children, ReactNode } from 'react';
-import * as Styled from './HorizontalList.styled';
+import * as Styled from './CardList.styled';
 
 import { BookCard } from '../BookCard';
 
-interface ListProps {
+interface CardListProps {
 	columns: number;
 	children: ReactNode;
 }
 
-export const HorizontalList: FC<ListProps> = ({ columns, children }) => {
+export const CardList: FC<CardListProps> = ({ columns, children }) => {
 	return (
 		<Styled.Container>
 			<Styled.Content>

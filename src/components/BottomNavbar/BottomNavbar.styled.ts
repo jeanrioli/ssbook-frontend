@@ -11,7 +11,7 @@ export const Container = styled.div`
 	display: flex;
 	align-items: center;
 
-	@media (min-width: 768px) {
+	@media (min-width: 1280px) {
 		display: none;
 	}
 `;
@@ -20,5 +20,5 @@ export const Navigation = styled.nav`
 	margin: 0 auto;
 	width: max-content;
 	display: flex;
-	gap: 28px;
+	gap: 26px;
 `;

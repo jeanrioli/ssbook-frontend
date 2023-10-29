@@ -5,6 +5,7 @@ export const Container = styled.button<{ isSelected: boolean }>`
 	background: none;
 	padding: 0;
 	width: 56px;
+	height: 37px;
 	color: ${({ isSelected }) => (isSelected ? '#A076F2' : '#9e9e9e')};
 `;
 

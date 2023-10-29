@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import * as Styled from './Library.styled';
-import { HorizontalList } from '../HorizontalList';
+import { CardList } from '../CardList';
 import { Button } from '../Button';
 import { BookCard } from '../BookCard';
 
@@ -13,11 +13,11 @@ export const Library: FC = () => {
 			</Styled.Top>
 
 			<Styled.Pills>
-				<HorizontalList columns={categories.length}>
+				<CardList columns={categories.length}>
 					{categories.map((categoria, index) => (
 						<Button variant='pill' text={categoria} isSelected={index === 0 ? true : false} />
 					))}
-				</HorizontalList>
+				</CardList>
 			</Styled.Pills>
 
 			<Styled.Books>

@@ -1,15 +1,15 @@
 import styled from 'styled-components';
-import { bottomNavbarHeight, headerHeight } from '../../utils/constants';
+import { bottomNavbarHeight, headerHeightMobile, headerHeightDesktop } from '../../utils/constants';
 
 export const Container = styled.div`
-	margin-top: ${headerHeight}px;
+	margin-top: ${headerHeightMobile}px;
 	margin-bottom: ${bottomNavbarHeight}px;
 	background-color: #f7f7f7;
-	min-height: calc(100vh - ${headerHeight}px - ${bottomNavbarHeight}px);
+	min-height: calc(100vh - ${headerHeightMobile}px - ${bottomNavbarHeight}px);
 	display: flex;
 	flex-direction: column;
 	@media (min-width: 1280px) {
-		margin: ${headerHeight}px 0 0;
+		margin: ${headerHeightDesktop}px 0 0;
 	}
 `;
 

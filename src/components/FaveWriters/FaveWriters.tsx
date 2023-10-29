@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import * as Styled from './FaveWriters.styled';
-import { HorizontalList } from '../HorizontalList';
+import { CardList } from '../CardList';
 import { WriterCard } from '../WiterCard';
 
 export const FaveWriters: FC = () => {
@@ -12,7 +12,7 @@ export const FaveWriters: FC = () => {
 				<Styled.Title>Autores favoritos</Styled.Title>
 				<Styled.More>ver todos</Styled.More>
 			</Styled.Top>
-			<HorizontalList columns={3}>
+			<CardList columns={3}>
 				{list.map((item) => (
 					<WriterCard
 						name='Rick Riordan'
@@ -20,7 +20,7 @@ export const FaveWriters: FC = () => {
 						works={9}
 					/>
 				))}
-			</HorizontalList>
+			</CardList>
 		</Styled.Container>
 	);
 };

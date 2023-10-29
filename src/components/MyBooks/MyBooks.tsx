@@ -2,7 +2,7 @@ import { FC, useState } from 'react';
 import * as Styled from './MyBooks.styled';
 
 import { HomeNavbar } from '../HomeNavbar';
-import { HorizontalList } from '../HorizontalList';
+import { CardList } from '../CardList';
 import { BookCard } from '../BookCard';
 
 export type Tabs = {
@@ -30,11 +30,11 @@ export const MyBooks: FC = () => {
 				<Styled.More>ver todos</Styled.More>
 			</Styled.Top>
 			{activeTab === 'MyBooks' && (
-				<HorizontalList columns={6}>
+				<CardList columns={6}>
 					{list.map((item) => (
 						<BookCard />
 					))}
-				</HorizontalList>
+				</CardList>
 			)}
 			{activeTab === 'Borrowed' && <>Emprestados...</>}
 		</Styled.Container>
