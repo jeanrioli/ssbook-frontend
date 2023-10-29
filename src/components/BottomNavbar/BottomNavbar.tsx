@@ -15,7 +15,12 @@ export const BottomNavbar: FC = () => {
 		<Styled.Container>
 			<Styled.Navigation>
 				{buttons.map((button, i) => (
-					<NavbarButton label={button.label} icon={button.icon} isSelected={button.label === 'Início'} />
+					<NavbarButton
+						variant='vertical'
+						label={button.label}
+						icon={button.icon}
+						isSelected={button.label === 'Início'}
+					/>
 				))}
 			</Styled.Navigation>
 		</Styled.Container>

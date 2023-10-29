@@ -17,7 +17,7 @@ export const FaveAuthors: FC = () => {
 				{list.map((item) => (
 					<WriterCard
 						name='Rick Riordan'
-						photo='https://cdn.rickriordan.com/wp-content/uploads/2020/10/11224708/rick.jpg '
+						photo='https://cdn.rickriordan.com/wp-content/uploads/2020/10/11224708/rick.jpg'
 						works={9}
 					/>
 				))}
