@@ -15,7 +15,7 @@ export const Library: FC = () => {
 			<Styled.Pills>
 				<PillList>
 					{categories.map((categoria, index) => (
-						<Button variant='pill' text={categoria} isSelected={index === 0 ? true : false} />
+						<Button variant='contained' text={categoria} isSelected={index === 0 ? true : false} />
 					))}
 				</PillList>
 			</Styled.Pills>

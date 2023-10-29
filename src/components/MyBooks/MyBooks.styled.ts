@@ -29,13 +29,3 @@ export const Title = styled.div`
 	font-weight: 700;
 	line-height: normal;
 `;
-
-export const More = styled.div`
-	color: #a076f2;
-
-	text-align: center;
-	font-size: 14px;
-	font-style: normal;
-	font-weight: 700;
-	line-height: normal;
-`;

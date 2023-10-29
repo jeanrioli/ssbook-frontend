@@ -2,6 +2,7 @@ import { FC } from 'react';
 import * as Styled from './FaveWriters.styled';
 import { CardList } from '../CardList';
 import { WriterCard } from '../WiterCard';
+import { Button } from '../Button';
 
 export const FaveWriters: FC = () => {
 	const list = [1, 2, 3, 4, 5, 6, 7, 8];
@@ -10,7 +11,7 @@ export const FaveWriters: FC = () => {
 		<Styled.Container>
 			<Styled.Top>
 				<Styled.Title>Autores favoritos</Styled.Title>
-				<Styled.More>ver todos</Styled.More>
+				<Button variant='text' text='ver todos' />
 			</Styled.Top>
 			<CardList columns={3}>
 				{list.map((item) => (

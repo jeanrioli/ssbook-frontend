@@ -26,16 +26,6 @@ export const Title = styled.div`
 	line-height: normal;
 `;
 
-export const More = styled.div`
-	color: #a076f2;
-
-	text-align: center;
-	font-size: 14px;
-	font-style: normal;
-	font-weight: 700;
-	line-height: normal;
-`;
-
 export const Pills = styled.div`
 	padding: 0 0 20px;
 

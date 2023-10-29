@@ -4,6 +4,7 @@ import * as Styled from './MyBooks.styled';
 import { HomeNavbar } from '../HomeNavbar';
 import { CardList } from '../CardList';
 import { BookCard } from '../BookCard';
+import { Button } from '../Button';
 
 export type Tabs = {
 	id: string;
@@ -27,7 +28,7 @@ export const MyBooks: FC = () => {
 			</Styled.Tabs>
 			<Styled.Top>
 				<Styled.Title>Livros favoritos</Styled.Title>
-				<Styled.More>ver todos</Styled.More>
+				<Button variant='text' text='ver todos' />
 			</Styled.Top>
 			{activeTab === 'MyBooks' && (
 				<CardList columns={6}>
