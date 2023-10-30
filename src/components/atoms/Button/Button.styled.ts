@@ -24,7 +24,9 @@ export const Container = styled.button<{ $isSelected?: boolean }>`
 
 export const Label = styled.div``;
 
-export const Icon = styled.div``;
+export const Icon = styled.div`
+	width: 24px;
+`;
 
 export const ButtonText = styled.div`
 	${Label} {

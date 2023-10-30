@@ -9,7 +9,7 @@ import {
 } from '../../utils';
 
 export const Container = styled.div`
-	margin-top: ${HEADER_HEIGHT_MOBILE}px;
+	margin-top: 0;
 	margin-bottom: ${BOTTOM_NAVIGATION_HEIGHT};
 	background-color: #f7f7f7;
 	min-height: calc(100vh - ${HEADER_HEIGHT_MOBILE} - ${BOTTOM_NAVIGATION_HEIGHT});
@@ -22,32 +22,40 @@ export const Container = styled.div`
 		margin: ${HEADER_HEIGHT_DESKTOP} 0 0;
 		min-height: calc(100vh - ${HEADER_HEIGHT_DESKTOP} - ${FOOTER_HEIGHT});
 		background: none;
+		padding: 24px 0 0;
 	}
 `;
 
 export const DesktopView = styled.div`
-	padding-left: calc(32px + 296px + ((100% - ${CONTENT_WIDTH}) / 2));
+	display: none;
+
+	@media (min-width: ${DESKTOP_BREAKPOINT}) {
+		display: block;
+	}
 `;
 
 export const MobileView = styled.div`
+	display: inline-block;
+
+	@media (min-width: ${DESKTOP_BREAKPOINT}) {
+		display: none;
+	}
+`;
+
+export const Top = styled.div`
 	height: 30vh;
 
 	@media (min-width: ${DESKTOP_BREAKPOINT}) {
+		padding-left: calc(32px + 296px + ((100% - ${CONTENT_WIDTH}) / 2));
+		padding-bottom: 24px;
+		width: calc(${CONTENT_WIDTH} - 32px - 296px);
+		display: block;
 		height: auto;
-		background: none;
-		width: ${CONTENT_WIDTH};
-		margin: 0 auto;
-		padding-top: 24px;
 	}
 `;
 
 export const Overflow = styled.div`
-	/* position: absolute; */
-	/* width: 100%; */
-	/* padding-bottom: 32px; */
-	/* height: 200px; */
 	background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.7) 100%);
-	/* padding: 20px; */
 	height: 100%;
 
 	@media (min-width: ${DESKTOP_BREAKPOINT}) {
@@ -56,7 +64,6 @@ export const Overflow = styled.div`
 `;
 
 export const Return = styled.div`
-	/* margin: 20px; */
 	padding: 20px;
 	display: flex;
 	justify-content: space-between;
@@ -87,9 +94,11 @@ export const BottomSection = styled.div`
 `;
 
 export const Content = styled.div`
+	padding: 0 20px;
+
 	@media (min-width: ${DESKTOP_BREAKPOINT}) {
-		width: calc(${CONTENT_WIDTH} - 32px - 296px);
-		padding-left: calc(32px + 296px);
+		width: calc(${CONTENT_WIDTH} - 24px - 296px);
+		padding-left: calc(24px + 296px);
 	}
 `;
 

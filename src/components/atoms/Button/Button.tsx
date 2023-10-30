@@ -62,7 +62,7 @@ export const Button: FC<ButtonProps> = (props) => {
 		return (
 			<Styled.Container onClick={props.onClick}>
 				<Styled.ButtonIcon>
-					<IconFave />
+					<Styled.Icon>{props.icon}</Styled.Icon>
 					<Styled.Label>{props.text}</Styled.Label>
 				</Styled.ButtonIcon>
 			</Styled.Container>
