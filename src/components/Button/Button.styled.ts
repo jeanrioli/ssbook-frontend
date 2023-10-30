@@ -6,11 +6,6 @@ export const Container = styled.button<{ isSelected?: boolean }>`
 	padding: 0;
 	cursor: pointer;
 
-	font-size: 14px;
-	font-style: normal;
-	font-weight: 500;
-	line-height: 20px;
-
 	${({ isSelected }) =>
 		isSelected &&
 		css`
@@ -26,8 +21,23 @@ export const Container = styled.button<{ isSelected?: boolean }>`
 		`}
 `;
 
+export const Label = styled.div``;
+
+export const Icon = styled.div``;
+
 export const ButtonText = styled.div`
-	color: #a076f2;
+	${Label} {
+		color: #a076f2;
+		text-align: center;
+		font-style: normal;
+		font-weight: 700;
+		line-height: normal;
+		font-size: 14px;
+
+		@media (min-width: 1280px) {
+			font-size: 16px;
+		}
+	}
 `;
 
 export const ButtonContained = styled.div`
@@ -38,6 +48,14 @@ export const ButtonContained = styled.div`
 	border-radius: 16px;
 	color: #757575;
 	border: 1px solid #e0e0e0;
+
+	${Label} {
+		text-align: center;
+		font-style: normal;
+		font-weight: 500;
+		line-height: normal;
+		font-size: 14px;
+	}
 `;
 
 export const ButtonUnderlined = styled.div`
@@ -46,16 +64,25 @@ export const ButtonUnderlined = styled.div`
 	display: flex;
 	flex-direction: column;
 	position: relative;
+
+	${Label} {
+		color: #555;
+		text-align: center;
+		font-style: normal;
+		font-weight: 700;
+		line-height: normal;
+		font-size: 14px;
+	}
 `;
 
-export const Label = styled.div`
-	color: #555;
+export const ButtonIcon = styled.div`
+	display: flex;
+	align-items: center;
+	gap: 12px;
 
-	text-align: center;
-	font-size: 14px;
-	font-style: normal;
-	font-weight: 700;
-	line-height: normal;
+	${Label} {
+		font-size: 18px;
+	}
 `;
 
 export const Line = styled.hr`

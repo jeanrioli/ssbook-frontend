@@ -8,25 +8,27 @@ export const Container = styled.div`
 	min-height: calc(100vh - ${headerHeightMobile}px - ${bottomNavbarHeight}px);
 	display: flex;
 	flex-direction: column;
-	background: url('https://m.media-amazon.com/images/I/A1UjcPz4gZL._SL1500_.jpg') no-repeat center top;
-	background-size: cover;
+	background-image: url('https://m.media-amazon.com/images/I/A1UjcPz4gZL._SL1500_.jpg');
+	background-size: 100% auto;
 
 	@media (min-width: 1280px) {
 		margin: ${headerHeightDesktop}px 0 0;
 		min-height: calc(100vh - ${headerHeightDesktop}px - ${footerHeight}px);
+		background: none;
 	}
 `;
 
 export const TopSection = styled.div`
-	position: absolute;
-	top: ${headerHeightMobile}px;
-	width: 100%;
+	/* position: absolute; */
+	/* top: ${headerHeightMobile}px; */
+	/* width: 100%; */
 	/* padding-bottom: 32px; */
-	height: 200px;
-	background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.7316176470588236) 100%);
+	/* height: 200px; */
+	background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.7) 100%);
 	/* padding: 20px; */
 
 	@media (min-width: 1280px) {
+		background: none;
 		width: 936px;
 		margin: 0 auto;
 		padding-top: 24px;
@@ -38,6 +40,10 @@ export const Return = styled.div`
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+
+	@media (min-width: 1280px) {
+		display: none;
+	}
 `;
 
 export const BottomSection = styled.div`
@@ -51,6 +57,7 @@ export const BottomSection = styled.div`
 	margin-top: 30vh;
 
 	@media (min-width: 1280px) {
+		margin-top: 0;
 		width: calc(936px + ((100% - 936px) / 2) - 32px);
 		margin-left: calc(((100% - 936px) / 2) - 32px);
 		box-shadow: 0px 0px 8px 0 rgba(0, 0, 0, 0.1);
@@ -60,7 +67,8 @@ export const BottomSection = styled.div`
 
 export const Content = styled.div`
 	@media (min-width: 1280px) {
-		width: 936px;
+		width: calc(936px - 32px - 296px);
+		padding-left: calc(32px + 296px);
 	}
 `;
 

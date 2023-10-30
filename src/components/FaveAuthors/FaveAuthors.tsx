@@ -3,6 +3,7 @@ import * as Styled from './FaveAuthors.styled';
 import { CardList } from '../CardList';
 import { WriterCard } from '../AuthorCard';
 import { Button } from '../Button';
+import { SectionTitle } from '../SectionTitle';
 
 export const FaveAuthors: FC = () => {
 	const list = [1, 2, 3, 4, 5, 6, 7, 8];
@@ -10,8 +11,7 @@ export const FaveAuthors: FC = () => {
 	return (
 		<Styled.Container>
 			<Styled.Top>
-				<Styled.Title>Autores favoritos</Styled.Title>
-				<Button variant='text' text='ver todos' />
+				<SectionTitle title='Autores favoritos' button={<Button variant='text' text='ver todos' />} />
 			</Styled.Top>
 			<CardList columns={3}>
 				{list.map((item) => (

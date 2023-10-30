@@ -1,7 +1,8 @@
 import { FC, ButtonHTMLAttributes } from 'react';
 import * as Styled from './Button.styled';
+import { IconFave } from '../../icons';
 
-type ButtonProps = ButtonText | ButtonContained | ButtonUnderlined;
+type ButtonProps = ButtonText | ButtonContained | ButtonUnderlined | ButtonIcon;
 
 interface ButtonText extends ButtonHTMLAttributes<HTMLButtonElement> {
 	variant: 'text';
@@ -19,30 +20,51 @@ interface ButtonUnderlined extends ButtonHTMLAttributes<HTMLButtonElement> {
 	isSelected: boolean;
 }
 
-export const Button: FC<ButtonProps> = (variant) => {
-	if (variant.variant === 'text') {
+interface ButtonIcon extends ButtonHTMLAttributes<HTMLButtonElement> {
+	variant: 'icon';
+	text: string;
+	icon: JSX.Element;
+}
+
+export const Button: FC<ButtonProps> = (props) => {
+	if (props.variant === 'text') {
 		return (
-			<Styled.Container onClick={variant.onClick}>
-				<Styled.ButtonText>{variant.text}</Styled.ButtonText>
+			<Styled.Container onClick={props.onClick}>
+				<Styled.ButtonText>
+					<Styled.Label>{props.text}</Styled.Label>
+				</Styled.ButtonText>
 			</Styled.Container>
 		);
 	}
 
-	if (variant.variant === 'contained') {
+	if (props.variant === 'contained') {
 		return (
-			<Styled.Container isSelected={variant.isSelected} onClick={variant.onClick}>
-				<Styled.ButtonContained>{variant.text}</Styled.ButtonContained>
+			<Styled.Container isSelected={props.isSelected} onClick={props.onClick}>
+				<Styled.ButtonContained>
+					<Styled.Label>{props.text}</Styled.Label>
+				</Styled.ButtonContained>
 			</Styled.Container>
 		);
 	}
 
-	if (variant.variant === 'underlined') {
+	if (props.variant === 'underlined') {
 		return (
-			<Styled.Container isSelected={variant.isSelected} onClick={variant.onClick}>
+			<Styled.Container isSelected={props.isSelected} onClick={props.onClick}>
 				<Styled.ButtonUnderlined>
-					<Styled.Label>{variant.text}</Styled.Label>
+					<Styled.Label>{props.text}</Styled.Label>
 					<Styled.Line />
 				</Styled.ButtonUnderlined>
+			</Styled.Container>
+		);
+	}
+
+	if (props.variant === 'icon') {
+		return (
+			<Styled.Container onClick={props.onClick}>
+				<Styled.ButtonIcon>
+					<IconFave />
+					<Styled.Label>{props.text}</Styled.Label>
+				</Styled.ButtonIcon>
 			</Styled.Container>
 		);
 	}

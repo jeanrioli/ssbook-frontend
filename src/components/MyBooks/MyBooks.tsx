@@ -5,6 +5,7 @@ import { HomeNavbar } from '../HomeNavbar';
 import { CardList } from '../CardList';
 import { BookCard } from '../BookCard';
 import { Button } from '../Button';
+import { SectionTitle } from '../SectionTitle';
 
 export type Tabs = {
 	id: string;
@@ -27,8 +28,7 @@ export const MyBooks: FC = () => {
 				<HomeNavbar tabs={tabs} selected={activeTab} onSelect={setActiveTab} />
 			</Styled.Tabs>
 			<Styled.Top>
-				<Styled.Title>Livros favoritos</Styled.Title>
-				<Button variant='text' text='ver todos' />
+				<SectionTitle title='Livros favoritos' button={<Button variant='text' text='ver todos' />} />
 			</Styled.Top>
 			{activeTab === 'MyBooks' && (
 				<CardList columns={6}>

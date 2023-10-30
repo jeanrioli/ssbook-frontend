@@ -3,13 +3,14 @@ import * as Styled from './Library.styled';
 import { PillList } from '../PillList';
 import { Button } from '../Button';
 import { BookCard } from '../BookCard';
+import { SectionTitle } from '../SectionTitle';
 
 export const Library: FC = () => {
 	const categories = ['Todos', 'terror', 'suspense', 'romance', 'aventura', 'comédia'];
 	return (
 		<Styled.Container>
 			<Styled.Top>
-				<Styled.Title>Biblioteca</Styled.Title>
+				<SectionTitle title='Biblioteca' />
 			</Styled.Top>
 
 			<Styled.Pills>
