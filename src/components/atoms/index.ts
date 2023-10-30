@@ -6,3 +6,4 @@ export * from './NavbarButton';
 export * from './Profile';
 export * from './Section';
 export * from './SectionTitle';
+export * from './Input';

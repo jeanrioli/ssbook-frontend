@@ -1,8 +1,9 @@
-import { HeaderInteraction } from '../../organisms/HeaderInteraction';
-import { Profile } from '../../atoms/Profile';
+import { FC } from 'react';
 import * as Styled from './Header.styled';
 
-export const Header = () => {
+import { HeaderInteraction } from '../../organisms';
+
+export const Header: FC = () => {
 	return (
 		<Styled.Container>
 			<Styled.Position>

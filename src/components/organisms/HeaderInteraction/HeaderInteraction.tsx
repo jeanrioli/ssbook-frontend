@@ -1,8 +1,7 @@
 import { FC } from 'react';
 import * as Styled from './HeaderInteraction.styled';
-import { NavbarButton } from '../../atoms/NavbarButton';
-import { IconAdd, IconFave } from '../../../icons';
-import { Profile } from '../../atoms/Profile';
+import { IconAdd, IconFave, IconSearch } from '../../../icons';
+import { Input, NavbarButton, Profile } from '../../atoms';
 
 export const HeaderInteraction: FC = () => {
 	const buttons = [
@@ -13,7 +12,9 @@ export const HeaderInteraction: FC = () => {
 	return (
 		<Styled.Container>
 			<Styled.DesktopInteraction>
-				<input style={{ flex: 1 }} />
+				<div style={{ flex: 1 }}>
+					<Input placeholder='Busque um livro' icon={<IconSearch />} />
+				</div>
 				{buttons.map((button, i) => (
 					<NavbarButton variant='horizontal' label={button.label} icon={button.icon} isSelected={true} key={i} />
 				))}
