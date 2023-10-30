@@ -4,3 +4,4 @@ export * from './HeaderInteraction';
 export * from './Library';
 export * from './MyBooks';
 export * from './PillList';
+export * from './FaveBooks';

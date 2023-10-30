@@ -1,32 +1,26 @@
 import styled from 'styled-components';
-import { DESKTOP_BREAKPOINT } from '../../../utils';
+import { CONTENT_WIDTH, DESKTOP_BREAKPOINT } from '../../../utils';
 
-export const Container = styled.div``;
-
-export const Tabs = styled.div`
-	padding-bottom: 32px;
-
-	@media (min-width: ${DESKTOP_BREAKPOINT}) {
-		padding-bottom: 24px;
-	}
+export const Container = styled.div`
+	display: flex;
+	flex-direction: column;
+	flex: 1;
 `;
 
 export const Top = styled.div`
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	padding: 0 20px 20px;
-
 	@media (min-width: ${DESKTOP_BREAKPOINT}) {
+		margin: 0 auto;
 		padding: 0 0 24px;
 	}
 `;
 
-export const Title = styled.div`
-	color: #555;
+export const Content = styled.div`
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
 
-	font-size: 20px;
-	font-style: normal;
-	font-weight: 700;
-	line-height: normal;
+	@media (min-width: ${DESKTOP_BREAKPOINT}) {
+		width: ${CONTENT_WIDTH};
+		gap: 40px;
+	}
 `;

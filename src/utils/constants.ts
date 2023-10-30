@@ -4,3 +4,4 @@ export const BOTTOM_NAVIGATION_HEIGHT = '56px';
 export const FOOTER_HEIGHT = '80px';
 export const DESKTOP_BREAKPOINT = '1280px';
 export const CONTENT_WIDTH = '936px';
+export const TAB_BAR_HEIGHT = '48px';

@@ -1,23 +1,25 @@
-import { FC } from 'react';
+import { FC, useState } from 'react';
 import * as Styled from './Home.styled';
-import { MyBooks } from '../../components';
-import { FaveAuthors } from '../../components/organisms/FaveAuthors';
-import { Library } from '../../components/organisms/Library';
+import { MyBooks, TabBar, Tabs } from '../../components';
+
+const tabs: Array<Tabs> = [
+	{ id: 'MyBooks', title: 'Meus livros' },
+	{ id: 'Borrowed', title: 'Emprestados' },
+];
 
 export const Home: FC = () => {
+	const [activeTab, setActiveTab] = useState<string>(tabs[0].id);
+
 	return (
 		<Styled.Container>
-			<Styled.TopSection>
-				<Styled.Content>
-					<MyBooks />
-				</Styled.Content>
-			</Styled.TopSection>
-			<Styled.BottomSection>
-				<Styled.Content>
-					<FaveAuthors />
-					<Library />
-				</Styled.Content>
-			</Styled.BottomSection>
+			<Styled.TabBar>
+				<TabBar tabs={tabs} selected={activeTab} onSelect={setActiveTab} />
+			</Styled.TabBar>
+
+			<Styled.Tab>
+				{activeTab === 'MyBooks' && <MyBooks />}
+				{activeTab === 'Borrowed' && <>Emprestados...</>}
+			</Styled.Tab>
 		</Styled.Container>
 	);
 };

@@ -1,16 +1,20 @@
 import { FC } from 'react';
-import * as Styled from './HomeNavbar.styled';
+import * as Styled from './TabBar.styled';
 
-import { Tabs } from '../../organisms/MyBooks';
 import { Button } from '../../atoms/Button';
 
-interface HomeNavbarProps {
+interface TabBarProps {
 	tabs: Array<Tabs>;
 	selected: string;
 	onSelect: (id: string) => void;
 }
 
-export const HomeNavbar: FC<HomeNavbarProps> = ({ tabs, selected, onSelect }) => {
+export type Tabs = {
+	id: string;
+	title: string;
+};
+
+export const TabBar: FC<TabBarProps> = ({ tabs, selected, onSelect }) => {
 	return (
 		<Styled.Container>
 			{tabs.map((tab) => (
