@@ -26,7 +26,7 @@ export const Title = styled.div`
 export const Author = styled.div`
 	${({ theme }) => theme.typography.subtitle.normal}
 
-	color: ${({ theme }) => theme.color.neutral.gray.normal};
+	color: ${({ theme }) => theme.color.neutral.gray.medium};
 	grid-column: 1 / 3;
 	grid-row: 2 / 3;
 

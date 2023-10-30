@@ -19,12 +19,8 @@ export const Top = styled.div`
 `;
 
 export const Title = styled.div`
-	color: #555;
-
-	font-size: 20px;
-	font-style: normal;
-	font-weight: 700;
-	line-height: normal;
+	${({ theme }) => theme.typography.title.normal}
+	color: ${({ theme }) => theme.color.neutral.gray.dark};
 `;
 
 export const Pills = styled.div`

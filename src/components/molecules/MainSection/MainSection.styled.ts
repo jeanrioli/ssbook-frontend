@@ -4,7 +4,7 @@ import { CONTENT_WIDTH, DESKTOP_BREAKPOINT } from '../../../utils';
 export const Container = styled.div`
 	flex: 1;
 	display: flex;
-	background-color: #fff;
+	background-color: ${({ theme }) => theme.color.neutral.white};
 	border-radius: 32px 0 0;
 	padding: 32px 0;
 	flex-direction: column;

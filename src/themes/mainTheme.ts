@@ -2,11 +2,12 @@ import { css } from 'styled-components';
 
 const MainTheme = {
 	color: {
-		primary: { normal: '#A076F2' },
+		primary: '#A076F2',
 		neutral: {
 			gray: {
 				light: '#f7f7f7',
-				normal: '#757575',
+				regular: '#9e9e9e',
+				medium: '#757575',
 				dark: '#555',
 			},
 			white: '#fff',
@@ -95,6 +96,13 @@ const MainTheme = {
 			heavy: css`
 				text-align: center;
 				font-size: 16px;
+				font-style: normal;
+				font-weight: 700;
+				line-height: normal;
+			`,
+			black: css`
+				text-align: center;
+				font-size: 18px;
 				font-style: normal;
 				font-weight: 700;
 				line-height: normal;

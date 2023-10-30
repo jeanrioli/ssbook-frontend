@@ -15,11 +15,6 @@ export const Photo = styled.img`
 `;
 
 export const Username = styled.div`
-	color: #555;
-
-	font-family: Roboto;
-	font-size: 14px;
-	font-style: normal;
-	font-weight: 700;
-	line-height: normal;
+	${({ theme }) => theme.typography.button.bold}
+	color: ${({ theme }) => theme.color.neutral.gray.dark}
 `;

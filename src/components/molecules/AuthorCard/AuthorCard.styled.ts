@@ -6,7 +6,7 @@ export const Container = styled.div`
 	border-radius: 8px;
 	border: 1px solid #e0e0e0;
 
-	background: #fff;
+	background: ${({ theme }) => theme.color.neutral.white};
 	cursor: pointer;
 `;
 
@@ -25,17 +25,11 @@ export const Info = styled.div`
 `;
 
 export const Name = styled.div`
-	color: #555;
-	font-size: 16px;
-	font-style: normal;
-	font-weight: 700;
-	line-height: 18px;
+	color: ${({ theme }) => theme.color.neutral.gray.dark};
+	${({ theme }) => theme.typography.button.heavy};
 `;
 
 export const Works = styled.div`
-	color: #757575;
-	font-size: 14px;
-	font-style: normal;
-	font-weight: 400;
-	line-height: normal;
+	color: ${({ theme }) => theme.color.neutral.gray.medium};
+	${({ theme }) => theme.typography.body.regular}
 `;

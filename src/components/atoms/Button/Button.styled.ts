@@ -11,13 +11,13 @@ export const Container = styled.button<{ $isSelected?: boolean }>`
 		$isSelected &&
 		css`
 			${ButtonContained} {
-				background-color: #a076f2;
-				border: 1px solid #a076f2;
-				color: #fff;
+				background-color: ${({ theme }) => theme.color.primary};
+				border: 1px solid ${({ theme }) => theme.color.primary};
+				color: ${({ theme }) => theme.color.neutral.white};
 			}
 
 			${Line} {
-				background: #a076f2;
+				background: ${({ theme }) => theme.color.primary};
 			}
 		`}
 `;
@@ -26,38 +26,31 @@ export const Label = styled.div``;
 
 export const Icon = styled.div`
 	width: 24px;
+	color: ${({ theme }) => theme.color.neutral.gray.dark};
 `;
 
 export const ButtonText = styled.div`
 	${Label} {
-		color: #a076f2;
-		text-align: center;
-		font-style: normal;
-		font-weight: 700;
-		line-height: normal;
-		font-size: 14px;
+		${({ theme }) => theme.typography.button.bold}
+		color: ${({ theme }) => theme.color.primary};
 
 		@media (min-width: ${DESKTOP_BREAKPOINT}) {
-			font-size: 16px;
+			${({ theme }) => theme.typography.button.heavy}
 		}
 	}
 `;
 
 export const ButtonContained = styled.div`
-	color: #fff;
+	color: ${({ theme }) => theme.color.neutral.white};
 
 	padding: 6px 16px;
-	background-color: #fff;
+	background-color: ${({ theme }) => theme.color.neutral.white};
 	border-radius: 16px;
-	color: #757575;
+	color: ${({ theme }) => theme.color.neutral.gray.medium};
 	border: 1px solid #e0e0e0;
 
 	${Label} {
-		text-align: center;
-		font-style: normal;
-		font-weight: 500;
-		line-height: normal;
-		font-size: 14px;
+		${({ theme }) => theme.typography.button.medium}
 	}
 `;
 
@@ -69,12 +62,8 @@ export const ButtonUnderlined = styled.div`
 	position: relative;
 
 	${Label} {
-		color: #555;
-		text-align: center;
-		font-style: normal;
-		font-weight: 700;
-		line-height: normal;
-		font-size: 14px;
+		${({ theme }) => theme.typography.button.bold}
+		color: ${({ theme }) => theme.color.neutral.gray.dark};
 	}
 `;
 
@@ -84,7 +73,8 @@ export const ButtonIcon = styled.div`
 	gap: 12px;
 
 	${Label} {
-		font-size: 18px;
+		${({ theme }) => theme.typography.button.black}
+		color: ${({ theme }) => theme.color.neutral.gray.dark};
 	}
 `;
 

@@ -6,7 +6,7 @@ export const Container = styled.div`
 	position: fixed;
 	top: 0;
 	z-index: 99;
-	background-color: #fff;
+	background-color: ${({ theme }) => theme.color.neutral.white};
 	display: flex;
 
 	@media (min-width: ${DESKTOP_BREAKPOINT}) {

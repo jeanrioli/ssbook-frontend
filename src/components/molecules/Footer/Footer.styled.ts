@@ -8,7 +8,7 @@ export const Container = styled.div`
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		background-color: #a076f2;
+		background-color: ${({ theme }) => theme.color.primary};
 		height: 80px;
 	}
 `;
@@ -21,6 +21,6 @@ export const Content = styled.div`
 export const Logo = styled.img``;
 
 export const Copyright = styled.div`
-	color: #fff;
+	color: ${({ theme }) => theme.color.neutral.white};
 	text-align: right;
 `;

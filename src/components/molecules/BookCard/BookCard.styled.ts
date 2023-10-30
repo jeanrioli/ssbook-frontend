@@ -43,6 +43,8 @@ export const Info = styled.div`
 `;
 
 export const Title = styled.div`
+	${({ theme }) => theme.typography.button.heavy};
+	color: ${({ theme }) => theme.color.neutral.gray.dark};
 	white-space: nowrap;
 	text-overflow: ellipsis;
 	overflow: hidden;
@@ -55,22 +57,9 @@ export const Title = styled.div`
 		-webkit-line-clamp: 2;
 		-webkit-box-orient: vertical;
 	}
-
-	color: #555;
-
-	font-family: Roboto;
-	font-size: 16px;
-	font-style: normal;
-	font-weight: 700;
-	line-height: 18px;
 `;
 
 export const Author = styled.div`
-	color: #757575;
-
-	font-family: Roboto;
-	font-size: 14px;
-	font-style: normal;
-	font-weight: 400;
-	line-height: normal;
+	${({ theme }) => theme.typography.body.regular};
+	color: ${({ theme }) => theme.color.neutral.gray.medium};
 `;

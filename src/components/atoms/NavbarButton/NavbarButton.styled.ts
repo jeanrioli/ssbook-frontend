@@ -16,14 +16,10 @@ export const Container = styled.button<{ $variant: 'vertical' | 'horizontal'; $i
 			display: flex;
 			gap: 12px;
 			align-items: center;
-			color: #555;
+			color: ${({ theme }) => theme.color.neutral.gray.dark};
 
 			${Label} {
-				font-family: Roboto;
-				font-size: 14px;
-				font-style: normal;
-				font-weight: 700;
-				line-height: normal;
+				${({ theme }) => theme.typography.button.bold}
 			}
 		`}
 
@@ -31,23 +27,19 @@ export const Container = styled.button<{ $variant: 'vertical' | 'horizontal'; $i
 		$variant === 'vertical' &&
 		!$isSelected &&
 		css`
-			color: #9e9e9e;
+			color: ${({ theme }) => theme.color.neutral.gray.regular};
 		`}
 
 	${({ $variant, $isSelected }) =>
 		$variant === 'vertical' &&
 		$isSelected &&
 		css`
-			color: #a076f2;
+			color: ${({ theme }) => theme.color.primary};
 		`}
 `;
 
 export const Icon = styled.div``;
 
 export const Label = styled.div`
-	text-align: center;
-	font-size: 10px;
-	font-style: normal;
-	font-weight: 500;
-	line-height: normal;
+	${({ theme }) => theme.typography.button.regular}
 `;

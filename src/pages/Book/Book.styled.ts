@@ -11,7 +11,7 @@ import {
 export const Container = styled.div`
 	margin-top: 0;
 	margin-bottom: ${BOTTOM_NAVIGATION_HEIGHT};
-	background-color: #f7f7f7;
+	background-color: ${({ theme }) => theme.color.neutral.gray.light};
 	min-height: calc(100vh - ${HEADER_HEIGHT_MOBILE} - ${BOTTOM_NAVIGATION_HEIGHT});
 	display: flex;
 	flex-direction: column;
@@ -77,7 +77,7 @@ export const Return = styled.div`
 export const BottomSection = styled.div`
 	flex: 1;
 	display: flex;
-	background-color: #fff;
+	background-color: ${({ theme }) => theme.color.neutral.white};
 	border-radius: 32px 0 0;
 	padding: 32px 0;
 	flex-direction: column;

@@ -12,7 +12,7 @@ import {
 export const Container = styled.div`
 	margin-top: calc(${HEADER_HEIGHT_MOBILE} + ${TAB_BAR_HEIGHT});
 	margin-bottom: ${BOTTOM_NAVIGATION_HEIGHT};
-	background-color: #f7f7f7;
+	background-color: ${({ theme }) => theme.color.neutral.gray.light};
 	min-height: calc(100vh - ${HEADER_HEIGHT_MOBILE} - ${HEADER_HEIGHT_MOBILE});
 	display: flex;
 	flex-direction: column;
