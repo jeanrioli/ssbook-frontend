@@ -8,9 +8,10 @@ export const Container = styled.div`
 `;
 
 export const Top = styled.div`
+	padding: 0 0 24px;
+
 	@media (min-width: ${DESKTOP_BREAKPOINT}) {
 		margin: 0 auto;
-		padding: 0 0 24px;
 	}
 `;
 

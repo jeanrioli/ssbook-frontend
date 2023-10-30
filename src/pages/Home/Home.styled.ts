@@ -38,4 +38,6 @@ export const TabBar = styled.div`
 
 export const Tab = styled.div`
 	padding-top: 20px;
+	flex: 1;
+	display: flex;
 `;

@@ -10,8 +10,8 @@ export const PillList: FC<PillListProps> = ({ children }) => {
 		<Styled.Container>
 			<Styled.Content>
 				<Styled.List>
-					{Children.map(children, (child) => (
-						<Styled.Item>{child}</Styled.Item>
+					{Children.map(children, (child, i) => (
+						<Styled.Item key={i}>{child}</Styled.Item>
 					))}
 				</Styled.List>
 			</Styled.Content>

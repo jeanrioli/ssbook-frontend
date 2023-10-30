@@ -25,15 +25,15 @@ export const Container = styled.div`
 	}
 `;
 
-export const TopSection = styled.div`
-	/* position: absolute; */
-	/* width: 100%; */
-	/* padding-bottom: 32px; */
-	/* height: 200px; */
-	background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.7) 100%);
-	/* padding: 20px; */
+export const DesktopView = styled.div`
+	padding-left: calc(32px + 296px + ((100% - ${CONTENT_WIDTH}) / 2));
+`;
+
+export const MobileView = styled.div`
+	height: 30vh;
 
 	@media (min-width: ${DESKTOP_BREAKPOINT}) {
+		height: auto;
 		background: none;
 		width: ${CONTENT_WIDTH};
 		margin: 0 auto;
@@ -41,8 +41,23 @@ export const TopSection = styled.div`
 	}
 `;
 
+export const Overflow = styled.div`
+	/* position: absolute; */
+	/* width: 100%; */
+	/* padding-bottom: 32px; */
+	/* height: 200px; */
+	background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.7) 100%);
+	/* padding: 20px; */
+	height: 100%;
+
+	@media (min-width: ${DESKTOP_BREAKPOINT}) {
+		display: none;
+	}
+`;
+
 export const Return = styled.div`
-	margin: 20px;
+	/* margin: 20px; */
+	padding: 20px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;

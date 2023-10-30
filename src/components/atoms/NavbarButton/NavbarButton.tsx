@@ -10,7 +10,7 @@ interface NavbarButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 
 export const NavbarButton: FC<NavbarButtonProps> = ({ variant, label, icon, isSelected = false, onClick }) => {
 	return (
-		<Styled.Container variant={variant} onClick={onClick} isSelected={isSelected}>
+		<Styled.Container $variant={variant} onClick={onClick} $isSelected={isSelected}>
 			<Styled.Icon>{icon}</Styled.Icon>
 			<Styled.Label>{label}</Styled.Label>
 		</Styled.Container>

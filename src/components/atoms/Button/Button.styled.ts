@@ -1,14 +1,14 @@
 import styled, { css } from 'styled-components';
 import { DESKTOP_BREAKPOINT } from '../../../utils';
 
-export const Container = styled.button<{ isSelected?: boolean }>`
+export const Container = styled.button<{ $isSelected?: boolean }>`
 	background: none;
 	border: none;
 	padding: 0;
 	cursor: pointer;
 
-	${({ isSelected }) =>
-		isSelected &&
+	${({ $isSelected }) =>
+		$isSelected &&
 		css`
 			${ButtonContained} {
 				background-color: #a076f2;

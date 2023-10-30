@@ -15,7 +15,7 @@ export const Content = styled.div`
 	}
 `;
 
-export const List = styled.div<{ columns: number }>`
+export const List = styled.div<{ $columns: number }>`
 	display: flex;
 	height: 100%;
 	overflow-x: scroll;
@@ -26,8 +26,8 @@ export const List = styled.div<{ columns: number }>`
 		gap: 24px;
 		padding: 0;
 		display: grid;
-		grid-template-columns: repeat(${({ columns }) => columns}, 1fr);
-		:nth-child(n + ${({ columns }) => columns + 1}) {
+		grid-template-columns: repeat(${({ $columns }) => $columns}, 1fr);
+		:nth-child(n + ${({ $columns }) => $columns + 1}) {
 			display: none;
 		}
 	}

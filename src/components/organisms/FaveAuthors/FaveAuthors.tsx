@@ -14,11 +14,12 @@ export const FaveAuthors: FC = () => {
 			</Styled.Top>
 
 			<CardList columns={3}>
-				{list.map((item) => (
+				{list.map((item, i) => (
 					<WriterCard
 						name='Rick Riordan'
 						photo='https://cdn.rickriordan.com/wp-content/uploads/2020/10/11224708/rick.jpg'
 						works={9}
+						key={i}
 					/>
 				))}
 			</CardList>

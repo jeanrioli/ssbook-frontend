@@ -1,19 +1,19 @@
 import styled, { css } from 'styled-components';
 
-export const Container = styled.div<{ variant: 'vertical' | 'horizontal' }>`
+export const Container = styled.div<{ $variant: 'vertical' | 'horizontal' }>`
 	width: 136px;
 	display: flex;
 	gap: 8px;
 	cursor: pointer;
 
-	${({ variant }) =>
-		variant === 'vertical' &&
+	${({ $variant }) =>
+		$variant === 'vertical' &&
 		css`
 			flex-direction: column;
 		`}
 
-	${({ variant }) =>
-		variant === 'horizontal' &&
+	${({ $variant }) =>
+		$variant === 'horizontal' &&
 		css`
 			width: 100%;
 

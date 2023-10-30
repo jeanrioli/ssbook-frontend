@@ -18,7 +18,7 @@ export const Home: FC = () => {
 
 			<Styled.Tab>
 				{activeTab === 'MyBooks' && <MyBooks />}
-				{activeTab === 'Borrowed' && <>Emprestados...</>}
+				{activeTab === 'Borrowed' && <></>}
 			</Styled.Tab>
 		</Styled.Container>
 	);

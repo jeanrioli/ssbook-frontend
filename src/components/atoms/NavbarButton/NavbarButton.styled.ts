@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 
-export const Container = styled.button<{ variant: 'vertical' | 'horizontal'; isSelected: boolean }>`
+export const Container = styled.button<{ $variant: 'vertical' | 'horizontal'; $isSelected: boolean }>`
 	cursor: pointer;
 	border: 0;
 	background: none;
@@ -8,8 +8,8 @@ export const Container = styled.button<{ variant: 'vertical' | 'horizontal'; isS
 	width: 56px;
 	height: 37px;
 
-	${({ variant }) =>
-		variant === 'horizontal' &&
+	${({ $variant }) =>
+		$variant === 'horizontal' &&
 		css`
 			width: auto;
 			height: 48px;
@@ -27,16 +27,16 @@ export const Container = styled.button<{ variant: 'vertical' | 'horizontal'; isS
 			}
 		`}
 
-	${({ variant, isSelected }) =>
-		variant === 'vertical' &&
-		!isSelected &&
+	${({ $variant, $isSelected }) =>
+		$variant === 'vertical' &&
+		!$isSelected &&
 		css`
 			color: #9e9e9e;
 		`}
 
-	${({ variant, isSelected }) =>
-		variant === 'vertical' &&
-		isSelected &&
+	${({ $variant, $isSelected }) =>
+		$variant === 'vertical' &&
+		$isSelected &&
 		css`
 			color: #a076f2;
 		`}

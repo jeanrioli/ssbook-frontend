@@ -39,7 +39,7 @@ export const Button: FC<ButtonProps> = (props) => {
 
 	if (props.variant === 'contained') {
 		return (
-			<Styled.Container isSelected={props.isSelected} onClick={props.onClick}>
+			<Styled.Container $isSelected={props.isSelected} onClick={props.onClick}>
 				<Styled.ButtonContained>
 					<Styled.Label>{props.text}</Styled.Label>
 				</Styled.ButtonContained>
@@ -49,7 +49,7 @@ export const Button: FC<ButtonProps> = (props) => {
 
 	if (props.variant === 'underlined') {
 		return (
-			<Styled.Container isSelected={props.isSelected} onClick={props.onClick}>
+			<Styled.Container $isSelected={props.isSelected} onClick={props.onClick}>
 				<Styled.ButtonUnderlined>
 					<Styled.Label>{props.text}</Styled.Label>
 					<Styled.Line />

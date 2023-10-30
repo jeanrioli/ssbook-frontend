@@ -14,8 +14,8 @@ export const FaveBooks: FC = () => {
 			</Styled.Top>
 
 			<CardList columns={6}>
-				{list.map((item) => (
-					<BookCard />
+				{list.map((item, i) => (
+					<BookCard key={i} />
 				))}
 			</CardList>
 		</Styled.Container>

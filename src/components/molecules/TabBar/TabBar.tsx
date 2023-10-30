@@ -17,12 +17,13 @@ export type Tabs = {
 export const TabBar: FC<TabBarProps> = ({ tabs, selected, onSelect }) => {
 	return (
 		<Styled.Container>
-			{tabs.map((tab) => (
+			{tabs.map((tab, i) => (
 				<Button
 					variant='underlined'
 					text={tab.title}
 					isSelected={tab.id === selected}
 					onClick={() => onSelect(tab.id)}
+					key={i}
 				/>
 			))}
 		</Styled.Container>

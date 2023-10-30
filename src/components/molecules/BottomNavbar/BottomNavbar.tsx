@@ -20,6 +20,7 @@ export const BottomNavbar: FC = () => {
 						label={button.label}
 						icon={button.icon}
 						isSelected={button.label === 'Início'}
+						key={i}
 					/>
 				))}
 			</Styled.Navigation>
