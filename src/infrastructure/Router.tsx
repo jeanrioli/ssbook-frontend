@@ -1,5 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
-import { Book, Home } from '../views';
+import { Book, Home } from '../pages';
 
 export const Router = () => {
 	return (
