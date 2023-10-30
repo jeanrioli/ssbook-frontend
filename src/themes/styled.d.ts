@@ -30,6 +30,7 @@ declare module 'styled-components' {
 			};
 
 			body: {
+				small: FlattenSimpleInterpolation;
 				regular: FlattenSimpleInterpolation;
 				medium: FlattenSimpleInterpolation;
 				large: FlattenSimpleInterpolation;

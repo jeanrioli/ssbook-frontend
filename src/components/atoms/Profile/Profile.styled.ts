@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { DESKTOP_BREAKPOINT } from '../../../utils';
 
 export const Container = styled.div`
 	display: flex;
@@ -15,6 +16,11 @@ export const Photo = styled.img`
 `;
 
 export const Username = styled.div`
-	${({ theme }) => theme.typography.button.bold}
-	color: ${({ theme }) => theme.color.neutral.gray.dark}
+	display: none;
+
+	@media (min-width: ${DESKTOP_BREAKPOINT}) {
+		${({ theme }) => theme.typography.button.bold};
+		color: ${({ theme }) => theme.color.neutral.gray.dark};
+		display: block;
+	}
 `;

@@ -7,31 +7,31 @@ export const Container = styled.div`
 
 	@media (min-width: ${DESKTOP_BREAKPOINT}) {
 		gap: 12px 0;
-		${({ theme }) => theme.typography.title.large}
+		${({ theme }) => theme.typography.title.large};
 	}
 `;
 
 export const Title = styled.div`
-	${({ theme }) => theme.typography.title.normal}
+	${({ theme }) => theme.typography.title.normal};
 
 	color: ${({ theme }) => theme.color.neutral.gray.dark};
 	grid-column: 1 / 3;
 	grid-row: 1 / 2;
 
 	@media (min-width: ${DESKTOP_BREAKPOINT}) {
-		${({ theme }) => theme.typography.title.large}
+		${({ theme }) => theme.typography.title.large};
 	}
 `;
 
 export const Author = styled.div`
-	${({ theme }) => theme.typography.subtitle.normal}
+	${({ theme }) => theme.typography.subtitle.normal};
 
 	color: ${({ theme }) => theme.color.neutral.gray.medium};
 	grid-column: 1 / 3;
 	grid-row: 2 / 3;
 
 	@media (min-width: ${DESKTOP_BREAKPOINT}) {
-		${({ theme }) => theme.typography.subtitle.large}
+		${({ theme }) => theme.typography.subtitle.large};
 	}
 `;
 

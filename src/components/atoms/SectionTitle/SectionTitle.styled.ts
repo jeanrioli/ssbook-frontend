@@ -12,12 +12,12 @@ export const Container = styled.div`
 	}
 `;
 
-export const Title = styled.div`
+export const Title = styled.h2`
 	color: ${({ theme }) => theme.color.neutral.gray.dark};
-	${({ theme }) => theme.typography.title.normal}
+	${({ theme }) => theme.typography.title.normal};
 
 	@media (min-width: ${DESKTOP_BREAKPOINT}) {
-		${({ theme }) => theme.typography.title.medium}
+		${({ theme }) => theme.typography.title.medium};
 	}
 `;
 

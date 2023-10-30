@@ -1,9 +1,9 @@
 import { FC } from 'react';
-import * as Styled from './BottomNavbar.styled';
+import * as Styled from './BottomNavigation.styled';
 import { NavbarButton } from '../../atoms/NavbarButton';
 import { IconAdd, IconFave, IconHome, IconSearch } from '../../../icons';
 
-export const BottomNavbar: FC = () => {
+export const BottomNavigation: FC = () => {
 	const buttons = [
 		{ label: 'Início', icon: <IconHome /> },
 		{ label: 'Adicionar', icon: <IconAdd /> },

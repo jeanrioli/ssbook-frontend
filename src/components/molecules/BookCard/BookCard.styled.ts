@@ -48,6 +48,7 @@ export const Title = styled.div`
 	white-space: nowrap;
 	text-overflow: ellipsis;
 	overflow: hidden;
+	text-align: left;
 
 	@supports (-webkit-line-clamp: 2) {
 		overflow: hidden;

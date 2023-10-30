@@ -52,6 +52,11 @@ const MainTheme = {
 		},
 
 		body: {
+			small: css`
+				font-size: 12px;
+				font-style: normal;
+				font-weight: 400;
+			`,
 			regular: css`
 				font-size: 14px;
 				font-style: normal;

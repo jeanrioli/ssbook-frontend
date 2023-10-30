@@ -33,6 +33,6 @@ export const List = styled.div<{ $columns: number }>`
 	}
 `;
 
-export const Item = styled.div`
+export const Item = styled.article`
 	flex-shrink: 0;
 `;

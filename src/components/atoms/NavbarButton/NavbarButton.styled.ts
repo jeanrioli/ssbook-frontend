@@ -19,7 +19,7 @@ export const Container = styled.button<{ $variant: 'vertical' | 'horizontal'; $i
 			color: ${({ theme }) => theme.color.neutral.gray.dark};
 
 			${Label} {
-				${({ theme }) => theme.typography.button.bold}
+				${({ theme }) => theme.typography.button.bold};
 			}
 		`}
 
@@ -41,5 +41,5 @@ export const Container = styled.button<{ $variant: 'vertical' | 'horizontal'; $i
 export const Icon = styled.div``;
 
 export const Label = styled.div`
-	${({ theme }) => theme.typography.button.regular}
+	${({ theme }) => theme.typography.button.regular};
 `;

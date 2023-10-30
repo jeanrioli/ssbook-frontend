@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { DESKTOP_BREAKPOINT } from '../../../utils';
 
-export const Container = styled.div`
+export const Container = styled.section`
 	display: flex;
 	flex-direction: column;
 `;
@@ -16,11 +16,6 @@ export const Top = styled.div`
 	@media (min-width: ${DESKTOP_BREAKPOINT}) {
 		padding: 0 0 24px;
 	}
-`;
-
-export const Title = styled.div`
-	${({ theme }) => theme.typography.title.normal}
-	color: ${({ theme }) => theme.color.neutral.gray.dark};
 `;
 
 export const Pills = styled.div`

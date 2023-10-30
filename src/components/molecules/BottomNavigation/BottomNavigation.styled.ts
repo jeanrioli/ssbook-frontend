@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { DESKTOP_BREAKPOINT } from '../../../utils';
 
-export const Container = styled.div`
+export const Container = styled.nav`
 	width: 100%;
 	background: #fff;
 	box-shadow: 0px -2px 8px 0px rgba(0, 0, 0, 0.08);
@@ -17,7 +17,7 @@ export const Container = styled.div`
 	}
 `;
 
-export const Navigation = styled.nav`
+export const Navigation = styled.div`
 	margin: 0 auto;
 	width: max-content;
 	display: flex;

@@ -31,11 +31,11 @@ export const Icon = styled.div`
 
 export const ButtonText = styled.div`
 	${Label} {
-		${({ theme }) => theme.typography.button.bold}
+		${({ theme }) => theme.typography.button.bold};
 		color: ${({ theme }) => theme.color.primary};
 
 		@media (min-width: ${DESKTOP_BREAKPOINT}) {
-			${({ theme }) => theme.typography.button.heavy}
+			${({ theme }) => theme.typography.button.heavy};
 		}
 	}
 `;
@@ -50,7 +50,7 @@ export const ButtonContained = styled.div`
 	border: 1px solid #e0e0e0;
 
 	${Label} {
-		${({ theme }) => theme.typography.button.medium}
+		${({ theme }) => theme.typography.button.medium};
 	}
 `;
 
@@ -62,7 +62,7 @@ export const ButtonUnderlined = styled.div`
 	position: relative;
 
 	${Label} {
-		${({ theme }) => theme.typography.button.bold}
+		${({ theme }) => theme.typography.button.bold};
 		color: ${({ theme }) => theme.color.neutral.gray.dark};
 	}
 `;
@@ -73,7 +73,7 @@ export const ButtonIcon = styled.div`
 	gap: 12px;
 
 	${Label} {
-		${({ theme }) => theme.typography.button.black}
+		${({ theme }) => theme.typography.button.black};
 		color: ${({ theme }) => theme.color.neutral.gray.dark};
 	}
 `;
