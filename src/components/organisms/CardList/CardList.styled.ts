@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { DESKTOP_BREAKPOINT } from '../../../utils';
 
 export const Container = styled.div`
 	display: flex;
@@ -21,7 +22,7 @@ export const List = styled.div<{ columns: number }>`
 	gap: 20px;
 	padding: 0 20px;
 
-	@media (min-width: 1280px) {
+	@media (min-width: ${DESKTOP_BREAKPOINT}) {
 		gap: 24px;
 		padding: 0;
 		display: grid;

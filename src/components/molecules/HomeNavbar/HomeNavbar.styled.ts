@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { DESKTOP_BREAKPOINT } from '../../../utils';
 
 export const Container = styled.div`
 	background-color: #fff;
@@ -8,7 +9,7 @@ export const Container = styled.div`
 	display: flex;
 	gap: 20px;
 
-	@media (min-width: 1280px) {
+	@media (min-width: ${DESKTOP_BREAKPOINT}) {
 		background-color: transparent;
 		border-radius: 0 0 0 0;
 		box-shadow: none;

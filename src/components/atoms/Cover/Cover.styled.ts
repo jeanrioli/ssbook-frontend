@@ -1,16 +1,17 @@
 import styled from 'styled-components';
+import { DESKTOP_BREAKPOINT, CONTENT_WIDTH } from '../../../utils';
 
 export const Container = styled.div`
 	display: none;
 
-	@media (min-width: 1280px) {
+	@media (min-width: ${DESKTOP_BREAKPOINT}) {
 		display: flex;
 		flex-direction: column;
 		gap: 20px;
 		width: 296px;
 		position: absolute;
 		top: 72px;
-		left: calc(((100% - 936px) / 2));
+		left: calc(((100% - ${CONTENT_WIDTH}) / 2));
 	}
 `;
 

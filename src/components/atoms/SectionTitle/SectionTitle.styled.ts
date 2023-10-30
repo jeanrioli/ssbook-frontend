@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { DESKTOP_BREAKPOINT } from '../../../utils';
 
 export const Container = styled.div`
 	width: 100%;
@@ -6,21 +7,17 @@ export const Container = styled.div`
 	justify-content: space-between;
 	align-items: center;
 
-	@media (min-width: 1280px) {
+	@media (min-width: ${DESKTOP_BREAKPOINT}) {
 		align-items: baseline;
 	}
 `;
 
 export const Title = styled.div`
-	color: #555;
+	color: ${({ theme }) => theme.color.neutral.gray.dark};
+	${({ theme }) => theme.typography.title.normal}
 
-	font-size: 20px;
-	font-style: normal;
-	font-weight: 700;
-	line-height: normal;
-
-	@media (min-width: 1280px) {
-		font-size: 28px;
+	@media (min-width: ${DESKTOP_BREAKPOINT}) {
+		${({ theme }) => theme.typography.title.medium}
 	}
 `;
 

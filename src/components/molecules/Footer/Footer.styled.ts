@@ -1,9 +1,10 @@
 import styled from 'styled-components';
+import { CONTENT_WIDTH, DESKTOP_BREAKPOINT } from '../../../utils';
 
 export const Container = styled.div`
 	display: none;
 
-	@media screen and (min-width: 1280px) {
+	@media (min-width: ${DESKTOP_BREAKPOINT}) {
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -14,7 +15,7 @@ export const Container = styled.div`
 export const Content = styled.div`
 	display: flex;
 	justify-content: space-between;
-	width: 936px;
+	width: ${CONTENT_WIDTH};
 `;
 
 export const Logo = styled.img``;

@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+import { DESKTOP_BREAKPOINT } from '../../../utils';
 
 export const Container = styled.button<{ isSelected?: boolean }>`
 	background: none;
@@ -34,7 +35,7 @@ export const ButtonText = styled.div`
 		line-height: normal;
 		font-size: 14px;
 
-		@media (min-width: 1280px) {
+		@media (min-width: ${DESKTOP_BREAKPOINT}) {
 			font-size: 16px;
 		}
 	}

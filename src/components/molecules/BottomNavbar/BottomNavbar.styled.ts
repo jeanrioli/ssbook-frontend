@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { DESKTOP_BREAKPOINT } from '../../../utils';
 
 export const Container = styled.div`
 	width: 100%;
@@ -11,7 +12,7 @@ export const Container = styled.div`
 	display: flex;
 	align-items: center;
 
-	@media (min-width: 1280px) {
+	@media (min-width: ${DESKTOP_BREAKPOINT}) {
 		display: none;
 	}
 `;

@@ -1,11 +1,12 @@
 import styled from 'styled-components';
+import { DESKTOP_BREAKPOINT } from '../../../utils';
 
 export const Container = styled.div``;
 
 export const Tabs = styled.div`
 	padding-bottom: 32px;
 
-	@media (min-width: 1280px) {
+	@media (min-width: ${DESKTOP_BREAKPOINT}) {
 		padding-bottom: 24px;
 	}
 `;
@@ -16,7 +17,7 @@ export const Top = styled.div`
 	justify-content: space-between;
 	padding: 0 20px 20px;
 
-	@media (min-width: 1280px) {
+	@media (min-width: ${DESKTOP_BREAKPOINT}) {
 		padding: 0 0 24px;
 	}
 `;
