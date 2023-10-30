@@ -1,11 +1,11 @@
 import { Routes, Route } from 'react-router-dom';
-import { Home } from '../views';
+import { Book, Home } from '../views';
 
 export const Router = () => {
 	return (
 		<Routes>
 			<Route path='/' element={<Home />} />
-			<Route path='path' element={<>path</>} />
+			<Route path='/book/:bookId' element={<Book />} />
 		</Routes>
 	);
 };

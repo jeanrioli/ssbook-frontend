@@ -2,18 +2,19 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
 	display: none;
-	background-color: #a076f2;
-	padding: 16px 20px;
 
 	@media screen and (min-width: 1280px) {
-		display: block;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-color: #a076f2;
+		height: 80px;
 	}
 `;
 export const Content = styled.div`
-	margin: 0 auto;
 	display: flex;
 	justify-content: space-between;
-	max-width: 936px;
+	width: 936px;
 `;
 
 export const Logo = styled.img``;
