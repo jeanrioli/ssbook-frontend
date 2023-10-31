@@ -20,6 +20,7 @@ export const Container = styled.div`
 	@media (min-width: ${DESKTOP_BREAKPOINT}) {
 		min-height: calc(100vh - ${HEADER_HEIGHT_DESKTOP} - ${FOOTER_HEIGHT});
 		margin: ${HEADER_HEIGHT_DESKTOP} 0 0;
+		padding-top: 24px;
 	}
 `;
 
@@ -40,4 +41,8 @@ export const Tab = styled.div`
 	padding-top: 32px;
 	flex: 1;
 	display: flex;
+
+	@media (min-width: ${DESKTOP_BREAKPOINT}) {
+		padding-top: 24px;
+	}
 `;

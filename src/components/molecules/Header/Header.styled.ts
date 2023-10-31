@@ -18,7 +18,9 @@ export const Container = styled.div`
 	}
 `;
 
-export const Logo = styled.img``;
+export const Logo = styled.img`
+	cursor: pointer;
+`;
 
 export const Position = styled.div`
 	width: 100%;

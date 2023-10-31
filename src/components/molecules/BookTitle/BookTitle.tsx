@@ -12,11 +12,13 @@ interface BookTitleProps {
 export const BookTitle: FC<BookTitleProps> = ({ title, author }) => {
 	return (
 		<Styled.Container>
-			<Styled.Title>{title}</Styled.Title>
+			<Styled.Info>
+				<Styled.Title>{title}</Styled.Title>
+				<Styled.Author>{author}</Styled.Author>
+			</Styled.Info>
 			<Styled.Button>
 				<Button variant='icon' icon={<IconFaveOutlined />} />
 			</Styled.Button>
-			<Styled.Author>{author}</Styled.Author>
 		</Styled.Container>
 	);
 };

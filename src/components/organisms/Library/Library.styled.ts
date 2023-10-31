@@ -30,10 +30,11 @@ export const Books = styled.div`
 	display: flex;
 	flex-direction: column;
 	gap: 20px;
-
 	padding: 0 20px;
 
 	@media (min-width: ${DESKTOP_BREAKPOINT}) {
 		padding: 0;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
 	}
 `;

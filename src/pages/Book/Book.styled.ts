@@ -27,6 +27,7 @@ export const Container = styled.div<{ url: string }>`
 `;
 
 export const DesktopView = styled.div`
+	width: 100%;
 	display: none;
 
 	@media (min-width: ${DESKTOP_BREAKPOINT}) {
@@ -35,6 +36,7 @@ export const DesktopView = styled.div`
 `;
 
 export const MobileView = styled.div`
+	width: 100%;
 	display: inline-block;
 
 	@media (min-width: ${DESKTOP_BREAKPOINT}) {
@@ -43,7 +45,7 @@ export const MobileView = styled.div`
 `;
 
 export const Top = styled.div`
-	height: 30vh;
+	height: 35vh;
 
 	@media (min-width: ${DESKTOP_BREAKPOINT}) {
 		padding-left: calc(24px + 296px + ((100% - ${CONTENT_WIDTH}) / 2));
