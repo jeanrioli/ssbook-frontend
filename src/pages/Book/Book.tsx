@@ -17,7 +17,7 @@ export const Book: FC = () => {
 	const response = useBook(bookId!);
 
 	return (
-		<Styled.Container url={response?.book.cover}>
+		<Styled.Container $url={response?.book.cover}>
 			<Helmet>
 				<title>{`${response?.book.name} | SSBook`}</title>
 			</Helmet>
