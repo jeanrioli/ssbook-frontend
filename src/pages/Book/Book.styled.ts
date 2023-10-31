@@ -77,6 +77,10 @@ export const Return = styled.div`
 export const Content = styled.div`
 	padding: 0 20px;
 
+	> div:nth-child(1) {
+		margin-bottom: 20px;
+	}
+
 	@media (min-width: ${DESKTOP_BREAKPOINT}) {
 		width: calc(${CONTENT_WIDTH} - 24px - 296px);
 		padding-left: calc(24px + 296px);
