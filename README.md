@@ -21,6 +21,7 @@ Acesse [http://localhost:3000](http://localhost:3000) no navegador para visualiz
 - Optei por criar um arquivo geral de temas para gerenciar cores e estilos de fontes;
 - Optei por deixar alguns componentes como Header e Footer com tamanho fixo;
 - Por falta de protótipo no Figma, optei por não tratar possíveis erros nas chamadas da api.
+- Na tela do livro, optei por mostrar sempre todo o conteúdo da capa, mantendo a largura e deixando a altura responsiva.
 
 ## Premissas assumidas
 
