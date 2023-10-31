@@ -29,4 +29,5 @@ Acesse [http://localhost:3000](http://localhost:3000) no navegador para visualiz
 - Por se tratar de uma plataforma, segui alguns parâmetros de HTML semântico, mas não me aprofundei a ponto de atender às regras de SEO, por exemplo;
 - Assumi que as abas Meus livros e Emprestados referem-se a todo o conteúdo da página Início;
 - Assumi que não era necessário tratamento de performance quanto ao número de chamadas executadas. Dessa forma, elas são executadas sempre que o componente é renderizado;
-- Por não haver protótipo no Figma, assumi que não deveria tratar possíveis erros na chamada, bem como retorno de loading enquanto ela está sendo executada.
+- Por não haver protótipo no Figma, assumi que não seria necessário tratar possíveis erros na chamada, bem como retorno de loading enquanto ela está sendo executada.
+- Por não haver protótipo no Figma, assumi que não seria necessário lidar com hover dos botões e componentes clicáveis.
