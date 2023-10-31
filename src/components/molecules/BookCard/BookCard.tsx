@@ -11,7 +11,7 @@ interface BookCardProps {
 export const BookCard: FC<BookCardProps> = ({ name, cover, author, variant = 'vertical' }) => {
 	return (
 		<Styled.Container $variant={variant}>
-			<Styled.Cover src={cover} />
+			<Styled.Cover src={cover} alt={name} />
 			<Styled.Info>
 				<Styled.Title>{name}</Styled.Title>
 				<Styled.Author>{author}</Styled.Author>

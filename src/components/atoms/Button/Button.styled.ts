@@ -49,6 +49,11 @@ export const ButtonContained = styled.div`
 	border-radius: 16px;
 	color: ${({ theme }) => theme.color.neutral.gray.medium};
 	border: 1px solid #e0e0e0;
+	text-transform: lowercase;
+
+	:first-letter {
+		text-transform: uppercase;
+	}
 
 	${Label} {
 		${({ theme }) => theme.typography.button.medium};
