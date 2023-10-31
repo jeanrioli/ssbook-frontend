@@ -8,7 +8,7 @@ No diretório do projeto, rode o comando:
 
 ### `npm install`
 
-Após ter instaladas todas as dependências, rode o comando:
+Após ter instalado as dependências, rode o comando:
 
 ### `npm start`
 
