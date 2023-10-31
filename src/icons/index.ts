@@ -7,4 +7,3 @@ export * from './IconShare';
 export * from './IconDots';
 export * from './IconSearch';
 export * from './IconArrow';
-export * from './IconAdd';

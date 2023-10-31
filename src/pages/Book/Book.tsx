@@ -38,18 +38,20 @@ export const Book: FC = () => {
 					<BookTitle title={response?.book.name} author={response?.book.author.name} />
 				</Styled.Top>
 			</Styled.DesktopView>
-			<div style={{ flex: 1, display: 'flex' }}>
+			<Styled.SectionContainer>
 				<MainSection>
 					<Styled.Content>
 						<Styled.MobileView>
 							<BookTitle title={response?.book.name} author={response?.book.author.name} />
 						</Styled.MobileView>
 						<Description description={response?.book.description} />
-						<SectionTitle title='Sobre o Autor' />
-						<Description description={'...'} />
+						<Styled.About>
+							<SectionTitle title='Sobre o Autor' />
+							<Description description={'...'} />
+						</Styled.About>
 					</Styled.Content>
 				</MainSection>
-			</div>
+			</Styled.SectionContainer>
 		</Styled.Container>
 	);
 };

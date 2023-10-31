@@ -46,7 +46,7 @@ export const Top = styled.div`
 	height: 30vh;
 
 	@media (min-width: ${DESKTOP_BREAKPOINT}) {
-		padding-left: calc(32px + 296px + ((100% - ${CONTENT_WIDTH}) / 2));
+		padding-left: calc(24px + 296px + ((100% - ${CONTENT_WIDTH}) / 2));
 		padding-bottom: 24px;
 		width: calc(${CONTENT_WIDTH} - 32px - 296px);
 		display: block;
@@ -74,25 +74,6 @@ export const Return = styled.div`
 	}
 `;
 
-export const BottomSection = styled.div`
-	flex: 1;
-	display: flex;
-	background-color: ${({ theme }) => theme.color.neutral.white};
-	border-radius: 32px 0 0;
-	padding: 32px 0;
-	flex-direction: column;
-	box-shadow: 0px -1px 1px 0px rgba(0, 0, 0, 0.05);
-	margin-top: 30vh;
-
-	@media (min-width: ${DESKTOP_BREAKPOINT}) {
-		margin-top: 0;
-		width: calc(${CONTENT_WIDTH} + ((100% - ${CONTENT_WIDTH}) / 2) - 32px);
-		margin-left: calc(((100% - ${CONTENT_WIDTH}) / 2) - 32px);
-		box-shadow: 0px 0px 8px 0 rgba(0, 0, 0, 0.1);
-		padding: 32px;
-	}
-`;
-
 export const Content = styled.div`
 	padding: 0 20px;
 
@@ -103,3 +84,21 @@ export const Content = styled.div`
 `;
 
 export const Cover = styled.div``;
+
+export const SectionContainer = styled.div`
+	flex: 1;
+	display: flex;
+`;
+
+export const About = styled.div`
+	display: none;
+	@media (min-width: ${DESKTOP_BREAKPOINT}) {
+		display: flex;
+		flex-direction: column;
+		margin-top: 40px;
+
+		h2:nth-child(1) {
+			margin-bottom: 24px;
+		}
+	}
+`;

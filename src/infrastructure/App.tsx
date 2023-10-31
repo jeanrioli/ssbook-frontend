@@ -9,9 +9,7 @@ import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
 
 function App() {
 	const isMobile = useIsMobile(1280);
-
 	const [hideHeader, setHideHeader] = useState<boolean>();
-
 	const client = new ApolloClient({
 		uri: 'https://us-central1-ss-devops.cloudfunctions.net/GraphQL',
 		cache: new InMemoryCache(),
