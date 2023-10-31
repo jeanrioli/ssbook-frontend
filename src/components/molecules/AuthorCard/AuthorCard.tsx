@@ -1,19 +1,19 @@
 import { FC } from 'react';
 import * as Styled from './AuthorCard.styled';
 
-interface WriterCardProps {
+interface AuthorCardProps {
 	name: string;
-	photo: string;
-	works: number;
+	picture: string;
+	booksCount: number;
 }
 
-export const WriterCard: FC<WriterCardProps> = ({ name, photo, works }) => {
+export const AuthorCard: FC<AuthorCardProps> = ({ name, picture, booksCount }) => {
 	return (
 		<Styled.Container>
-			<Styled.Photo src={photo} />
+			<Styled.Photo src={picture} alt={name} />
 			<Styled.Info>
 				<Styled.Name>{name}</Styled.Name>
-				<Styled.Works>{`${works} ${works > 1 ? 'livros' : 'livro'}`}</Styled.Works>
+				<Styled.Works>{`${booksCount} ${booksCount > 1 ? 'livros' : 'livro'}`}</Styled.Works>
 			</Styled.Info>
 		</Styled.Container>
 	);

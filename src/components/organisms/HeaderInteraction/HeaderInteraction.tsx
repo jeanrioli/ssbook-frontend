@@ -1,8 +1,9 @@
-import { FC, useEffect, useState } from 'react';
+import { FC } from 'react';
 import * as Styled from './HeaderInteraction.styled';
+
 import { IconAdd, IconFave, IconSearch } from '../../../icons';
 import { Input, NavbarButton, Profile } from '../../atoms';
-import { gql, useQuery } from '@apollo/client';
+import { useUserPicture } from '../../../services';
 
 const buttons = [
 	{ label: 'Adicionar', icon: <IconAdd /> },
@@ -10,26 +11,20 @@ const buttons = [
 ];
 
 export const HeaderInteraction: FC = () => {
-	const TESTE = gql`
-		query FetchPicture {
-			userPicture
-		}
-	`;
-
-	const { data } = useQuery(TESTE);
+	const response = useUserPicture();
 
 	return (
 		<Styled.Container>
 			<Styled.DesktopInteraction>
-				<div style={{ flex: 1 }}>
+				<Styled.InputContainer>
 					<Input placeholder='Busque um livro' icon={<IconSearch />} />
-				</div>
+				</Styled.InputContainer>
 				{buttons.map((button, i) => (
 					<NavbarButton variant='horizontal' label={button.label} icon={button.icon} isSelected={true} key={i} />
 				))}
 				<Styled.Separator />
 			</Styled.DesktopInteraction>
-			<Profile username='Neytiri' avatar={data?.userPicture} />
+			<Profile username='Neytiri' avatar={response?.userPicture} />
 		</Styled.Container>
 	);
 };

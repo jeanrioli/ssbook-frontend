@@ -21,6 +21,10 @@ export const DesktopInteraction = styled.div`
 	}
 `;
 
+export const InputContainer = styled.div`
+	flex: 1;
+`;
+
 export const Separator = styled.hr`
 	height: 40px;
 	width: 1px;

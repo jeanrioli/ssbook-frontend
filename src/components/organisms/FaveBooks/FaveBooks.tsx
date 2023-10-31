@@ -3,10 +3,11 @@ import * as Styled from './FaveBooks.styled';
 import { CardList } from '../CardList';
 import { BookCard } from '../../molecules';
 import { Button, SectionTitle } from '../../atoms';
-
-const list = [1, 2, 3, 4, 5, 6, 7, 8];
+import { useFaveBooks } from '../../../services';
 
 export const FaveBooks: FC = () => {
+	const response = useFaveBooks();
+
 	return (
 		<Styled.Container>
 			<Styled.Top>
@@ -14,8 +15,8 @@ export const FaveBooks: FC = () => {
 			</Styled.Top>
 
 			<CardList columns={6}>
-				{list.map((item, i) => (
-					<BookCard key={i} />
+				{response?.favoriteBooks.map((book, i) => (
+					<BookCard name={book.name} cover={book.cover} author={book.author.name} key={i} />
 				))}
 			</CardList>
 		</Styled.Container>

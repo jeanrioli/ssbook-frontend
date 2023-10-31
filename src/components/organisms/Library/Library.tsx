@@ -1,12 +1,22 @@
 import { FC } from 'react';
 import * as Styled from './Library.styled';
 import { PillList } from '../PillList';
-import { Button } from '../../atoms/Button';
 import { BookCard } from '../../molecules/BookCard';
-import { SectionTitle } from '../../atoms/SectionTitle';
+import { Button, SectionTitle } from '../../atoms';
+import { useAllBooks } from '../../../services';
 
 export const Library: FC = () => {
-	const categories = ['Todos', 'terror', 'suspense', 'romance', 'aventura', 'comédia'];
+	const response = useAllBooks();
+
+	let categories = ['TODOS'];
+	response?.allBooks.forEach((book) => {
+		if (!categories.includes(book.category)) {
+			categories.push(book.category);
+		}
+	});
+
+	console.log(categories);
+
 	return (
 		<Styled.Container>
 			<Styled.Top>
@@ -22,13 +32,9 @@ export const Library: FC = () => {
 			</Styled.Pills>
 
 			<Styled.Books>
-				<BookCard variant='horizontal' />
-				<BookCard variant='horizontal' />
-				<BookCard variant='horizontal' />
-				<BookCard variant='horizontal' />
-				<BookCard variant='horizontal' />
-				<BookCard variant='horizontal' />
-				<BookCard variant='horizontal' />
+				{response?.allBooks.map((book, i) => (
+					<BookCard variant='horizontal' name={book.name} cover={book.cover} author={book.author.name} key={i} />
+				))}
 			</Styled.Books>
 		</Styled.Container>
 	);
