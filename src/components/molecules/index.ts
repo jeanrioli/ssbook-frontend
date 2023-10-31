@@ -6,3 +6,4 @@ export * from './Header';
 export * from './TabBar';
 export * from './MainSection';
 export * from './Banner';
+export * from './BookTitle';

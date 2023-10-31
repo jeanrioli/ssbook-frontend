@@ -1,6 +1,7 @@
 import { FC, useState } from 'react';
 import * as Styled from './Home.styled';
 import { MyBooks, TabBar, Tabs } from '../../components';
+import { Helmet } from 'react-helmet';
 
 const tabs: Array<Tabs> = [
 	{ id: 'MyBooks', title: 'Meus livros' },
@@ -12,6 +13,10 @@ export const Home: FC = () => {
 
 	return (
 		<Styled.Container>
+			<Helmet>
+				<title>Início | SSBook</title>
+			</Helmet>
+
 			<Styled.TabBar>
 				<TabBar tabs={tabs} selected={activeTab} onSelect={setActiveTab} />
 			</Styled.TabBar>

@@ -11,6 +11,7 @@ const MainTheme = {
 				dark: '#555',
 			},
 			white: '#fff',
+			black: '#000',
 		},
 	},
 

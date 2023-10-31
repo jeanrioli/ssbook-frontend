@@ -20,7 +20,7 @@ export const HeaderInteraction: FC = () => {
 				))}
 				<Styled.Separator />
 			</Styled.DesktopInteraction>
-			<Profile />
+			<Profile username='Jucicreide' photo='https://cdn.rickriordan.com/wp-content/uploads/2020/10/11224708/rick.jpg' />
 		</Styled.Container>
 	);
 };

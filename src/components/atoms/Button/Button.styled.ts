@@ -6,6 +6,7 @@ export const Container = styled.button<{ $isSelected?: boolean }>`
 	border: none;
 	padding: 0;
 	cursor: pointer;
+	height: fit-content;
 
 	${({ $isSelected }) =>
 		$isSelected &&

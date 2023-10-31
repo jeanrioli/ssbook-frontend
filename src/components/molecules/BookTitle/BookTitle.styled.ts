@@ -37,7 +37,7 @@ export const Author = styled.div`
 
 export const Button = styled.div`
 	grid-column: 3 / 4;
-	grid-row: 1 / 3;
+	grid-row: 1 / 2;
 	display: flex;
 	justify-content: flex-end;
 

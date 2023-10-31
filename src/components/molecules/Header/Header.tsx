@@ -8,7 +8,7 @@ export const Header: FC = () => {
 		<Styled.Container>
 			<Styled.Position>
 				<Styled.Content>
-					<Styled.Logo src='logo/ssbook-color-logo.svg' alt='ssbook logo' />
+					<Styled.Logo src='/logo/ssbook-color-logo.svg' alt='ssbook logo' />
 					<HeaderInteraction />
 				</Styled.Content>
 			</Styled.Position>

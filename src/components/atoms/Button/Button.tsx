@@ -22,8 +22,8 @@ interface ButtonUnderlined extends ButtonHTMLAttributes<HTMLButtonElement> {
 
 interface ButtonIcon extends ButtonHTMLAttributes<HTMLButtonElement> {
 	variant: 'icon';
-	text: string;
 	icon: JSX.Element;
+	text?: string;
 }
 
 export const Button: FC<ButtonProps> = (props) => {
@@ -63,7 +63,7 @@ export const Button: FC<ButtonProps> = (props) => {
 			<Styled.Container onClick={props.onClick}>
 				<Styled.ButtonIcon>
 					<Styled.Icon>{props.icon}</Styled.Icon>
-					<Styled.Label>{props.text}</Styled.Label>
+					{props.text ? <Styled.Label>{props.text}</Styled.Label> : null}
 				</Styled.ButtonIcon>
 			</Styled.Container>
 		);

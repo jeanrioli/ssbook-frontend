@@ -1,6 +1,7 @@
 export * from './IconAdd';
 export * from './IconHome';
 export * from './IconFave';
+export * from './IconFaveOutlined';
 export * from './IconSave';
 export * from './IconShare';
 export * from './IconDots';

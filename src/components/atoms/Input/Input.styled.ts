@@ -17,7 +17,7 @@ export const Container = styled.div`
 export const Input = styled.input`
 	all: unset;
 	${({ theme }) => theme.typography.body.regular}
-	color: ${({ theme }) => theme.color.neutral.gray.dark};
+	color: ${({ theme }) => theme.color.neutral.black};
 	flex: 1;
 `;
 
