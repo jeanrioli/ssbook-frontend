@@ -5,11 +5,17 @@ import { ThemeProvider } from 'styled-components';
 import MainTheme from '../themes/mainTheme';
 import { useIsMobile } from '../utils';
 import { useLayoutEffect, useState } from 'react';
+import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
 
 function App() {
 	const isMobile = useIsMobile(1280);
 
 	const [hideHeader, setHideHeader] = useState<boolean>();
+
+	const client = new ApolloClient({
+		uri: 'https://us-central1-ss-devops.cloudfunctions.net/GraphQL',
+		cache: new InMemoryCache(),
+	});
 
 	useLayoutEffect(() => {
 		if (isMobile && window.location.pathname.includes('/book/')) {
@@ -22,10 +28,12 @@ function App() {
 	return (
 		<ThemeProvider theme={MainTheme}>
 			<BrowserRouter>
-				{hideHeader ? null : <Header />}
-				<Router />
-				<Footer />
-				<BottomNavigation />
+				<ApolloProvider client={client}>
+					{hideHeader ? null : <Header />}
+					<Router />
+					<Footer />
+					<BottomNavigation />
+				</ApolloProvider>
 			</BrowserRouter>
 		</ThemeProvider>
 	);

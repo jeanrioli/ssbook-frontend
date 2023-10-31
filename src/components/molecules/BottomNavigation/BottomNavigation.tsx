@@ -1,6 +1,7 @@
 import { FC } from 'react';
 import * as Styled from './BottomNavigation.styled';
-import { NavbarButton } from '../../atoms/NavbarButton';
+
+import { NavbarButton } from '../../atoms';
 import { IconAdd, IconFave, IconHome, IconSearch } from '../../../icons';
 
 export const BottomNavigation: FC = () => {

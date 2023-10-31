@@ -1,13 +1,22 @@
-import { FC } from 'react';
+import { FC, useEffect, useState } from 'react';
 import * as Styled from './HeaderInteraction.styled';
 import { IconAdd, IconFave, IconSearch } from '../../../icons';
 import { Input, NavbarButton, Profile } from '../../atoms';
+import { gql, useQuery } from '@apollo/client';
+
+const buttons = [
+	{ label: 'Adicionar', icon: <IconAdd /> },
+	{ label: 'Favoritos', icon: <IconFave /> },
+];
 
 export const HeaderInteraction: FC = () => {
-	const buttons = [
-		{ label: 'Adicionar', icon: <IconAdd /> },
-		{ label: 'Favoritos', icon: <IconFave /> },
-	];
+	const TESTE = gql`
+		query FetchPicture {
+			userPicture
+		}
+	`;
+
+	const { data } = useQuery(TESTE);
 
 	return (
 		<Styled.Container>
@@ -20,7 +29,7 @@ export const HeaderInteraction: FC = () => {
 				))}
 				<Styled.Separator />
 			</Styled.DesktopInteraction>
-			<Profile username='Jucicreide' photo='https://cdn.rickriordan.com/wp-content/uploads/2020/10/11224708/rick.jpg' />
+			<Profile username='Neytiri' avatar={data?.userPicture} />
 		</Styled.Container>
 	);
 };
