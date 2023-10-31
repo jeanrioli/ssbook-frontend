@@ -9,7 +9,7 @@ interface ProfileProps {
 export const Profile: FC<ProfileProps> = ({ username, avatar }) => {
 	return (
 		<Styled.Container>
-			<Styled.Photo src={avatar} alt='user profile photo' />
+			<Styled.Photo src={avatar} alt='user picture' />
 			<Styled.Username>{username}</Styled.Username>
 		</Styled.Container>
 	);

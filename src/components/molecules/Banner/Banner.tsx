@@ -1,5 +1,6 @@
 import { FC } from 'react';
 import * as Styled from './Banner.styled';
+
 import { Button } from '../../atoms/Button';
 import { IconFave, IconSave, IconShare } from '../../../icons';
 
@@ -18,7 +19,6 @@ export const Banner: FC<BannerProps> = ({ cover, name }) => {
 	return (
 		<Styled.Container>
 			<Styled.Cover src={cover} alt={name} />
-
 			{bannerButtons.map((button, i) => (
 				<Button variant='icon' text={button.text} icon={button.icon} onClick={button.action} key={i} />
 			))}

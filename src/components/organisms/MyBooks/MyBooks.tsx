@@ -14,7 +14,6 @@ export const MyBooks: FC = () => {
 					<FaveBooks />
 				</Styled.Content>
 			</Styled.Top>
-
 			<MainSection>
 				<Styled.Content>
 					<FaveAuthors />

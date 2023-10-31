@@ -13,7 +13,7 @@ export const AuthorCard: FC<AuthorCardProps> = ({ name, picture, booksCount }) =
 			<Styled.Photo src={picture} alt={name} />
 			<Styled.Info>
 				<Styled.Name>{name}</Styled.Name>
-				<Styled.Works>{`${booksCount} ${booksCount > 1 ? 'livros' : 'livro'}`}</Styled.Works>
+				<Styled.BooksCount>{`${booksCount} ${booksCount > 1 ? 'livros' : 'livro'}`}</Styled.BooksCount>
 			</Styled.Info>
 		</Styled.Container>
 	);

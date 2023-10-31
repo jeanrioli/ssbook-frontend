@@ -1,14 +1,14 @@
 import { FC, ButtonHTMLAttributes } from 'react';
-import * as Styled from './NavbarButton.styled';
+import * as Styled from './ButtonNavbar.styled';
 
-interface NavbarButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+interface ButtonNavbarProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 	variant: 'horizontal' | 'vertical';
 	label: string;
 	icon: JSX.Element;
 	isSelected?: boolean;
 }
 
-export const NavbarButton: FC<NavbarButtonProps> = ({ variant, label, icon, isSelected = false, onClick }) => {
+export const ButtonNavbar: FC<ButtonNavbarProps> = ({ variant, label, icon, isSelected = false, onClick }) => {
 	return (
 		<Styled.Container $variant={variant} onClick={onClick} $isSelected={isSelected}>
 			<Styled.Icon>{icon}</Styled.Icon>

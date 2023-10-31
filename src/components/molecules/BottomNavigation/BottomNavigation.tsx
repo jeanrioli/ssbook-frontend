@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import * as Styled from './BottomNavigation.styled';
 
-import { NavbarButton } from '../../atoms';
+import { ButtonNavbar } from '../../atoms';
 import { IconAdd, IconFave, IconHome, IconSearch } from '../../../icons';
 
 export const BottomNavigation: FC = () => {
@@ -16,7 +16,7 @@ export const BottomNavigation: FC = () => {
 		<Styled.Container>
 			<Styled.Navigation>
 				{buttons.map((button, i) => (
-					<NavbarButton
+					<ButtonNavbar
 						variant='vertical'
 						label={button.label}
 						icon={button.icon}

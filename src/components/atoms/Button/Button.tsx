@@ -1,6 +1,5 @@
 import { FC, ButtonHTMLAttributes } from 'react';
 import * as Styled from './Button.styled';
-import { IconFave } from '../../../icons';
 
 type ButtonProps = ButtonText | ButtonContained | ButtonUnderlined | ButtonIcon;
 

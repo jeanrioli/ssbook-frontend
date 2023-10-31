@@ -37,7 +37,6 @@ export const Library: FC = () => {
 			<Styled.Top>
 				<SectionTitle title='Biblioteca' />
 			</Styled.Top>
-
 			<Styled.Pills>
 				<PillList>
 					{categories.map((category, i) => (
@@ -45,7 +44,6 @@ export const Library: FC = () => {
 					))}
 				</PillList>
 			</Styled.Pills>
-
 			<Styled.Books>
 				{response?.allBooks.map((book) => (
 					<BookCard

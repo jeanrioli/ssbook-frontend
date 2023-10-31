@@ -29,7 +29,7 @@ export const Name = styled.div`
 	${({ theme }) => theme.typography.button.heavy};
 `;
 
-export const Works = styled.div`
+export const BooksCount = styled.div`
 	color: ${({ theme }) => theme.color.neutral.gray.medium};
 	${({ theme }) => theme.typography.body.regular}
 `;

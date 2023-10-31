@@ -17,7 +17,6 @@ export const FaveBooks: FC = () => {
 			<Styled.Top>
 				<SectionTitle title='Livros favoritos' button={<Button variant='text' text='ver todos' />} />
 			</Styled.Top>
-
 			<CardList columns={6}>
 				{response?.favoriteBooks.map((book) => (
 					<BookCard

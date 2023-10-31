@@ -15,7 +15,6 @@ export const Book: FC = () => {
 	}, []);
 
 	const response = useBook(bookId!);
-	console.log(response?.book.name);
 
 	return (
 		<Styled.Container url={response?.book.cover}>

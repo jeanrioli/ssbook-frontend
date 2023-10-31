@@ -2,7 +2,7 @@ import { FC } from 'react';
 import * as Styled from './HeaderInteraction.styled';
 
 import { IconAdd, IconFave, IconSearch } from '../../../icons';
-import { Input, NavbarButton, Profile } from '../../atoms';
+import { Input, ButtonNavbar, Profile } from '../../atoms';
 import { useUserPicture } from '../../../services';
 
 const buttons = [
@@ -20,7 +20,7 @@ export const HeaderInteraction: FC = () => {
 					<Input placeholder='Busque um livro' icon={<IconSearch />} />
 				</Styled.InputContainer>
 				{buttons.map((button, i) => (
-					<NavbarButton variant='horizontal' label={button.label} icon={button.icon} isSelected={true} key={i} />
+					<ButtonNavbar variant='horizontal' label={button.label} icon={button.icon} isSelected={true} key={i} />
 				))}
 				<Styled.Separator />
 			</Styled.DesktopInteraction>
