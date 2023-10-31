@@ -3,7 +3,12 @@ import * as Styled from './Banner.styled';
 import { Button } from '../../atoms/Button';
 import { IconFave, IconSave, IconShare } from '../../../icons';
 
-export const Banner: FC = () => {
+interface BannerProps {
+	cover: string;
+	name: string;
+}
+
+export const Banner: FC<BannerProps> = ({ cover, name }) => {
 	const bannerButtons = [
 		{ text: 'Favoritar', icon: <IconFave />, action: () => {} },
 		{ text: 'Compartilhar', icon: <IconShare />, action: () => {} },
@@ -12,7 +17,7 @@ export const Banner: FC = () => {
 
 	return (
 		<Styled.Container>
-			<Styled.Cover src='https://m.media-amazon.com/images/I/A1UjcPz4gZL._SL1500_.jpg' />
+			<Styled.Cover src={cover} alt={name} />
 
 			{bannerButtons.map((button, i) => (
 				<Button variant='icon' text={button.text} icon={button.icon} onClick={button.action} key={i} />

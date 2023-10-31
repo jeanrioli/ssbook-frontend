@@ -8,14 +8,14 @@ import {
 	CONTENT_WIDTH,
 } from '../../utils';
 
-export const Container = styled.div`
+export const Container = styled.div<{ url: string }>`
 	margin-top: 0;
 	margin-bottom: ${BOTTOM_NAVIGATION_HEIGHT};
 	background-color: ${({ theme }) => theme.color.neutral.gray.light};
 	min-height: calc(100vh - ${HEADER_HEIGHT_MOBILE} - ${BOTTOM_NAVIGATION_HEIGHT});
 	display: flex;
 	flex-direction: column;
-	background-image: url('https://m.media-amazon.com/images/I/A1UjcPz4gZL._SL1500_.jpg');
+	background-image: url(${({ url }) => url});
 	background-size: 100% auto;
 
 	@media (min-width: ${DESKTOP_BREAKPOINT}) {

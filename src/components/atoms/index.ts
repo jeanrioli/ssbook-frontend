@@ -1,4 +1,4 @@
-export * from './About';
+export * from './Description';
 export * from './Button';
 export * from './Icon';
 export * from './NavbarButton';

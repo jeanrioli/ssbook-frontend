@@ -1,20 +1,28 @@
-import { FC } from 'react';
+import { FC, useEffect } from 'react';
 import * as Styled from './Book.styled';
 
 import { useParams } from 'react-router-dom';
-import { BookTitle, Banner, MainSection, SectionTitle, About } from '../../components';
+import { BookTitle, Banner, MainSection, SectionTitle, Description } from '../../components';
 import { IconArrow, IconDots } from '../../icons';
 import { Helmet } from 'react-helmet';
+import { useBook } from '../../services';
 
 export const Book: FC = () => {
 	const { bookId } = useParams();
 
+	useEffect(() => {
+		window.scrollTo({ top: 0 });
+	}, []);
+
+	const response = useBook(bookId!);
+	console.log(response?.book.name);
+
 	return (
-		<Styled.Container>
+		<Styled.Container url={response?.book.cover}>
 			<Helmet>
-				<title>Título do livro | SSBook</title>
+				<title>{`${response?.book.name} | SSBook`}</title>
 			</Helmet>
-			<Banner />
+			<Banner cover={response?.book.cover} name={response?.book.name} />
 			<Styled.MobileView>
 				<Styled.Top>
 					<Styled.Overflow>
@@ -27,18 +35,18 @@ export const Book: FC = () => {
 			</Styled.MobileView>
 			<Styled.DesktopView>
 				<Styled.Top>
-					<BookTitle />
+					<BookTitle title={response?.book.name} author={response?.book.author.name} />
 				</Styled.Top>
 			</Styled.DesktopView>
 			<div style={{ flex: 1, display: 'flex' }}>
 				<MainSection>
 					<Styled.Content>
 						<Styled.MobileView>
-							<BookTitle />
+							<BookTitle title={response?.book.name} author={response?.book.author.name} />
 						</Styled.MobileView>
-						<About />
+						<Description description={response?.book.description} />
 						<SectionTitle title='Sobre o Autor' />
-						<About />{' '}
+						<Description description={'...'} />
 					</Styled.Content>
 				</MainSection>
 			</div>
