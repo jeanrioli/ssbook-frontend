@@ -39,6 +39,12 @@ export const Container = styled.div<{ $variant: 'vertical' | 'horizontal' }>`
 					height: 100px;
 				}
 			}
+
+			${Title} {
+				@media (min-width: ${DESKTOP_BREAKPOINT}) {
+					-webkit-line-clamp: 3;
+				}
+			}
 		`}
 `;
 
@@ -68,10 +74,6 @@ export const Title = styled.div`
 	display: -webkit-box;
 	-webkit-line-clamp: 2;
 	-webkit-box-orient: vertical;
-
-	@media (min-width: ${DESKTOP_BREAKPOINT}) {
-		-webkit-line-clamp: 3;
-	}
 `;
 
 export const Author = styled.div`

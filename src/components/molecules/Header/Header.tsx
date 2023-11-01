@@ -1,11 +1,25 @@
-import { FC } from 'react';
+import { FC, useLayoutEffect, useState } from 'react';
 import * as Styled from './Header.styled';
 
 import { HeaderInteraction } from '../../organisms';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
+import { useIsMobile } from '../../../utils';
 
 export const Header: FC = () => {
+	const isMobile = useIsMobile(1280);
 	const navigate = useNavigate();
+	const { pathname } = useLocation();
+	const [hideHeader, setHideHeader] = useState<boolean>();
+
+	useLayoutEffect(() => {
+		if (isMobile && pathname.includes('/book/')) {
+			setHideHeader(true);
+		} else {
+			setHideHeader(false);
+		}
+	}, [isMobile, pathname]);
+
+	if (hideHeader) return null;
 
 	return (
 		<Styled.Container>

@@ -20,7 +20,8 @@ Acesse [http://localhost:3000](http://localhost:3000) no navegador para visualiz
 - Optei por usar Styled Components para melhor organização de estilos e por ser otimizado para gerenciamento de variantes;
 - Optei por criar um arquivo geral de temas para gerenciar cores e estilos de fontes;
 - Optei por deixar alguns componentes como Header e Footer com tamanho fixo;
-- Na tela do livro, optei por mostrar sempre todo o conteúdo da capa, mantendo a largura e deixando a altura responsiva.
+- Na tela do livro, optei por mostrar sempre todo o conteúdo da capa, mantendo a largura e deixando a altura responsiva;
+- Pela impossibilidade de testar em dispositivos Apple, o design foi desenvolvido tendo em foco navegadores que rodam no sistema Windows.
 
 ## Premissas assumidas
 
@@ -29,4 +30,5 @@ Acesse [http://localhost:3000](http://localhost:3000) no navegador para visualiz
 - Assumi que as abas Meus livros e Emprestados referem-se a todo o conteúdo da página Início;
 - Assumi que não era necessário tratamento de performance quanto ao número de chamadas executadas. Dessa forma, elas são executadas sempre que o componente é renderizado;
 - Por não haver protótipo no Figma, assumi que não seria necessário tratar possíveis erros na chamada, bem como retorno de loading enquanto ela está sendo executada.
-- Por não haver protótipo no Figma, assumi que não seria necessário lidar com hover dos botões e componentes clicáveis.
+- Por não haver protótipo no Figma, assumi que não seria necessário lidar com hover dos botões e componentes clicáveis;
+- Como não há descrição do autor no objeto retornado Author, mantive a seção Sobre o Autor, mas sem o conteúdo.

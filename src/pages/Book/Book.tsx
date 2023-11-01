@@ -1,14 +1,15 @@
 import { FC, useEffect } from 'react';
 import * as Styled from './Book.styled';
 
-import { useParams } from 'react-router-dom';
-import { BookTitle, Banner, MainSection, SectionTitle, Description } from '../../components';
+import { useNavigate, useParams } from 'react-router-dom';
+import { BookTitle, Banner, MainSection, SectionTitle, Description, Button } from '../../components';
 import { IconArrow, IconDots } from '../../icons';
 import { Helmet } from 'react-helmet';
 import { useBook } from '../../services';
 
 export const Book: FC = () => {
 	const { bookId } = useParams();
+	const navigate = useNavigate();
 
 	useEffect(() => {
 		window.scrollTo({ top: 0 });
@@ -26,8 +27,8 @@ export const Book: FC = () => {
 				<Styled.Top>
 					<Styled.Overflow>
 						<Styled.Return>
-							<IconArrow />
-							<IconDots />
+							<Button variant='icon' icon={<IconArrow />} onClick={() => navigate('/')} />
+							<Button variant='icon' icon={<IconDots />} onClick={() => {}} />
 						</Styled.Return>
 					</Styled.Overflow>
 				</Styled.Top>
